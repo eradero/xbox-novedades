@@ -29,9 +29,7 @@ const posts = (await getCollection('blog')).sort(
 			.hero h1 {
 				font-size: 3.5rem;
 				margin-bottom: 0.5rem;
-				background: linear-gradient(90deg, #00e5ff, #008899);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
+				color: #ffffff;
 			}
 			.hero p {
 				font-size: 1.2rem;
@@ -65,8 +63,8 @@ const posts = (await getCollection('blog')).sort(
 			}
 			ul li a:hover {
 				transform: translateY(-5px);
-				border-color: rgba(0, 229, 255, 0.4);
-				box-shadow: 0 10px 40px rgba(0, 229, 255, 0.1);
+				border-color: var(--accent);
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 			}
 			ul li:first-child {
 				width: 100%;
