@@ -1,0 +1,89 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={`Política de Privacidad - ${SITE_TITLE}`} description="Política de Privacidad y Cookies del blog" />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 3rem 1.5rem;
+			}
+			.content-box {
+				background: var(--glass-bg);
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+				border: 1px solid var(--glass-border);
+				border-radius: 20px;
+				padding: 3rem;
+				box-shadow: var(--box-shadow);
+			}
+			h1 {
+				color: #fff;
+				margin-bottom: 2rem;
+				text-align: center;
+			}
+			h2 {
+				color: var(--accent);
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
+			}
+			p, ul {
+				color: var(--text-primary);
+				margin-bottom: 1rem;
+				line-height: 1.8;
+			}
+			li {
+				margin-bottom: 0.5rem;
+			}
+			a {
+				color: var(--accent);
+				text-decoration: underline;
+			}
+			@media (max-width: 720px) {
+				.content-box {
+					padding: 1.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="content-box">
+				<h1>Política de Privacidad</h1>
+				
+				<p>En <strong>{SITE_TITLE}</strong>, accesible desde esta página web, una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de Privacidad contiene los tipos de información que se recopila y registra en nuestro sitio web y cómo la utilizamos.</p>
+
+				<h2>1. Archivos de Registro (Log Files)</h2>
+				<p>{SITE_TITLE} sigue un procedimiento estándar de uso de archivos de registro. Estos archivos registran a los visitantes cuando entran a sitios web. La información recopilada por los archivos de registro incluye direcciones de protocolo de internet (IP), tipo de navegador, proveedor de servicios de internet (ISP), sello de fecha y hora, páginas de referencia/salida y posiblemente el número de clics. Estos no están vinculados a ninguna información que sea personalmente identificable.</p>
+
+				<h2>2. Cookies y Web Beacons</h2>
+				<p>Como cualquier otro sitio web, {SITE_TITLE} utiliza "cookies". Estas cookies se utilizan para almacenar información, incluyendo las preferencias de los visitantes y las páginas del sitio web a las que el visitante accedió o visitó. La información se utiliza para optimizar la experiencia de los usuarios personalizando el contenido de nuestra página web en función del tipo de navegador de los visitantes y/u otra información.</p>
+
+				<h2>3. Google DoubleClick DART Cookie</h2>
+				<p>Google es uno de los proveedores externos en nuestro sitio. También utiliza cookies, conocidas como cookies DART, para mostrar anuncios a los visitantes de nuestro sitio basándose en su visita a nuestro sitio y a otros sitios en Internet. Sin embargo, los visitantes pueden optar por rechazar el uso de cookies DART visitando la Política de Privacidad de la red de contenido y anuncios de Google en la siguiente URL: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+
+				<h2>4. Políticas de Privacidad de Terceros</h2>
+				<p>Nuestra Política de Privacidad no se aplica a otros anunciantes o sitios web. Por lo tanto, le aconsejamos que consulte las Políticas de Privacidad respectivas de estos servidores de anuncios de terceros para obtener información más detallada. Puede incluir sus prácticas e instrucciones sobre cómo darse de baja de ciertas opciones.</p>
+				<p>Puede optar por deshabilitar las cookies a través de las opciones individuales de su navegador. Para conocer información más detallada sobre la gestión de cookies con navegadores web específicos, se puede encontrar en los sitios web respectivos de los navegadores.</p>
+
+				<h2>5. Consentimiento</h2>
+				<p>Al utilizar nuestro sitio web, usted acepta por la presente nuestra Política de Privacidad y está de acuerdo con sus Términos y Condiciones.</p>
+				
+				<p style="margin-top: 3rem; font-size: 0.9em; color: var(--text-secondary); text-align: center;">
+					Última actualización: {new Date().toLocaleDateString('es-AR')}
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

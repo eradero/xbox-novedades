@@ -1,0 +1,39 @@
+name: Auto-Update Xbox Blog
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Instalar dependencias de Python
+      run: |
+        cd backend
+        python -m pip install --upgrade pip
+        pip install feedparser google-genai requests beautifulsoup4 python-dotenv
+
+    - name: Ejecutar script de IA y Scraper
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        cd backend
+        python main.py
+
+    - name: Hacer Commit y Push de los nuevos artículos
+      run: |
+        git config --global user.name 'GitHub Action Bot'
+        git config --global user.email 'action@github.com'
+        git add .
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: Nuevas noticias de Xbox agregadas" && git push)

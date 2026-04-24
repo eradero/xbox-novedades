@@ -1,0 +1,29 @@
+---
+const today = new Date();
+---
+
+<footer>
+	&copy; {today.getFullYear()} Enrique Radero. All rights reserved.
+	<div class="footer-links">
+		<a href="/privacy">Política de Privacidad y Cookies</a>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.footer-links {
+		margin-top: 1.5rem;
+		font-size: 0.9em;
+	}
+	.footer-links a {
+		color: rgb(var(--gray));
+		text-decoration: none;
+	}
+	.footer-links a:hover {
+		text-decoration: underline;
+	}
+</style>

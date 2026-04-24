@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Sobre Nosotros"
+	description="Conoce la misión de Novedades Xbox: El pulso del gaming"
+	pubDate={new Date()}
+	heroImage=""
+>
+	<div class="about-container">
+		<h2>Nuestra Misión</h2>
+		<p>
+			En <strong>Novedades Xbox: El pulso del gaming</strong>, nuestra misión es democratizar el acceso a la información sobre nuestro sector. Creemos firmemente que la información no debe ser un privilegio para pocos, sino una herramienta de conocimiento al alcance de todos.
+		</p>
+
+		<h2>¿Qué Hacemos?</h2>
+		<p>
+			Día a día, rastreamos las noticias más relevantes, avances y tendencias en <strong>Un blog dedicado a las últimas noticias y actualizaciones de Xbox, cubriendo lanzamientos de juegos, Game Pass, hardware, eventos y la comunidad Xbox. El estilo debe ser moderno, dinámico y optimista, similar al tono de marketing oficial de Xbox, como si fuera la voz oficial de Xbox pero en un blog de novedades.</strong>.
+		</p>
+		<p>
+			Nuestro contenido es curado, redactado e ilustrado utilizando herramientas de Inteligencia Artificial de vanguardia.
+		</p>
+
+		<h2>El Futuro es Hoy</h2>
+		<p>
+			A través de este espacio, buscamos no solo informar, sino también educar y preparar a nuestra sociedad para los desafíos y las inmensas oportunidades.
+		</p>
+		
+		<p>
+			<em>¡Gracias por ser parte de esta comunidad tecnológica!</em>
+		</p>
+	</div>
+</Layout>
+
+<style>
+	.about-container {
+		background: var(--glass-bg);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border: 1px solid var(--glass-border);
+		border-radius: 20px;
+		padding: 3rem;
+		box-shadow: var(--box-shadow);
+		margin-top: 2rem;
+	}
+	h2 {
+		color: var(--accent);
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+	h2:first-child {
+		margin-top: 0;
+	}
+	p {
+		color: var(--text-primary);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		font-size: 1.1rem;
+	}
+	@media (max-width: 720px) {
+		.about-container {
+			padding: 1.5rem;
+		}
+	}
+</style>
