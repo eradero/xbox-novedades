@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-	--accent: #00e5ff;
-	--accent-dark: #008899;
-	--black: 10, 10, 15;
-	--gray: 150, 150, 180;
-	--gray-light: 220, 220, 255;
-	--gray-dark: 20, 25, 35;
-	--glass-bg: rgba(20, 25, 40, 0.6);
-	--glass-border: rgba(255, 255, 255, 0.1);
-	--text-primary: #e0e5ff;
-	--text-secondary: #a0a5c0;
-	--box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	--accent: #107c10;
+	--accent-light: #2ca02c;
+	--accent-dark: #0a4f0a;
+	--black: 5, 5, 5;
+	--gray: 40, 40, 40;
+	--gray-light: 180, 180, 180;
+	--gray-dark: 20, 20, 20;
+	--glass-bg: rgba(20, 20, 20, 0.85);
+	--glass-border: rgba(16, 124, 16, 0.3);
+	--text-primary: #ffffff;
+	--text-secondary: #b0b0b0;
+	--box-shadow: 0 0 20px rgba(16, 124, 16, 0.2);
 }
 
 body {
@@ -19,11 +20,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background-color: #0a0a0f;
-	background-image: url('/background-ai.png');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	background-color: #050505;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--text-primary);
