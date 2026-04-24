@@ -6,13 +6,13 @@
 	--accent-dark: #0a4f0a;
 	--black: 5, 5, 5;
 	--gray: 40, 40, 40;
-	--gray-light: 180, 180, 180;
+	--gray-light: 220, 220, 220;
 	--gray-dark: 20, 20, 20;
-	--glass-bg: rgba(20, 20, 20, 0.85);
-	--glass-border: rgba(16, 124, 16, 0.3);
+	--glass-bg: rgba(10, 10, 10, 0.9);
+	--glass-border: rgba(16, 124, 16, 0.4);
 	--text-primary: #ffffff;
-	--text-secondary: #b0b0b0;
-	--box-shadow: 0 0 20px rgba(16, 124, 16, 0.2);
+	--text-secondary: #d0d0d0;
+	--box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -21,6 +21,9 @@ body {
 	padding: 0;
 	text-align: left;
 	background-color: #050505;
+	background-image: url('/xbox-pattern.png');
+	background-repeat: repeat;
+	background-size: 400px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--text-primary);
