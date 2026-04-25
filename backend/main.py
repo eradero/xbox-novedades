@@ -122,8 +122,6 @@ heroImage: '{image_path}'
         history.append(article["link"])
         save_history(history)
         
-        # Solo procesamos uno a la vez en esta prueba para no agotar la API rápidamente
-        break
 
     print("Proceso finalizado.")
 
