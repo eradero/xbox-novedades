@@ -60,7 +60,7 @@ def search_internet_image(query):
             if m:
                 data = json.loads(m)
                 img_url = data.get("murl")
-                if img_url and img_url.startswith("http"):
+                if img_url and img_url.startswith("http") and is_valid_image(img_url):
                     return img_url
         return ""
     except Exception as e:
