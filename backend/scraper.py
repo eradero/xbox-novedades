@@ -44,12 +44,13 @@ def extract_article_data(url):
         print(f"Error extrayendo {url}: {e}")
         return "", ""
 
-def search_internet_image(query):
+def search_internet_image(query, extra_term=""):
     """Searches for an image on the internet (Bing) as a fallback."""
     try:
-        print(f"Buscando imagen en internet para: {query}")
+        search_query = f"{query} {extra_term}".strip()
+        print(f"Buscando imagen en internet para: {search_query}")
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
-        url = f"https://www.bing.com/images/search?q={urllib.parse.quote(query)}"
+        url = f"https://www.bing.com/images/search?q={urllib.parse.quote(search_query)}"
         response = requests.get(url, headers=headers, timeout=10)
         soup = BeautifulSoup(response.text, "html.parser")
         
