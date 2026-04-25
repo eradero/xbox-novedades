@@ -2,7 +2,7 @@
 title: '¡Game Pass Vuelve a Sorprender! Final Fantasy V Lidera una Ola de 10 Nuevos Títulos Imperdibles'
 description: 'Descubre la última expansión de Xbox Game Pass, con el clásico Final Fantasy V y otros nueve juegos que prometen horas de diversión para todos.'
 pubDate: 'Apr 24 2026'
-heroImage: '/images/game-pass-vuelve-a-sorprender-final-fantasy-v-lidera-una-ola-de-10-nuevos-t-tulos-imperdibles.jpg'
+heroImage: 'https://images.unsplash.com/photo-1605906302474-3c738c2a97e6?q=80&w=1024'
 ---
 
 ¡Atención, gamers y amantes de Xbox! El universo Xbox nunca duerme, y si hay algo que nos tiene constantemente al borde del asiento es la incesante avalancha de novedades que llegan a nuestro querido **Game Pass**. Prepárense porque este mes, el servicio de suscripción más aclamado de la industria no solo cumple, sino que supera las expectativas con una adición estelar y una oleada de títulos que prometen mantenernos pegados a la pantalla.

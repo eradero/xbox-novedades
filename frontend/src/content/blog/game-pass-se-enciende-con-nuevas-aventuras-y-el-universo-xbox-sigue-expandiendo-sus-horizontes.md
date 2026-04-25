@@ -2,7 +2,7 @@
 title: '¡Game Pass se Enciende con Nuevas Aventuras y el Universo Xbox Sigue Expandiendo sus Horizontes!'
 description: 'Descubre las últimas incorporaciones a Xbox Game Pass, los próximos lanzamientos emocionantes y todas las novedades que hacen vibrar a la comunidad Xbox.'
 pubDate: 'Apr 24 2026'
-heroImage: '/images/game-pass-se-enciende-con-nuevas-aventuras-y-el-universo-xbox-sigue-expandiendo-sus-horizontes.jpg'
+heroImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1024'
 ---
 
 ¡Hola, Spartans, Jefes Maestros, Corredores y Exploradores del Universo Xbox!

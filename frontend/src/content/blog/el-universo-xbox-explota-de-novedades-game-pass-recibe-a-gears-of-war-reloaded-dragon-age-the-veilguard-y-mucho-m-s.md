@@ -2,7 +2,7 @@
 title: '¡El Universo Xbox Explota de Novedades! Game Pass Recibe a Gears of War: Reloaded, Dragon Age: The Veilguard y Mucho Más'
 description: 'Descubre las últimas bombas de Xbox: nuevos juegos para Game Pass como Gears of War: Reloaded y Dragon Age: The Veilguard, y las novedades que vibran en el universo gaming.'
 pubDate: 'Apr 25 2026'
-heroImage: '/images/el-universo-xbox-explota-de-novedades-game-pass-recibe-a-gears-of-war-reloaded-dragon-age-the-veilguard-y-mucho-m-s.jpg'
+heroImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1024'
 ---
 
 ¡Atención, comunidad Xbox! Si pensaban que el ritmo de innovaciones y lanzamientos iba a bajar, piensen de nuevo. El universo Xbox está más vivo que nunca, vibrando con anuncios que nos tienen al borde del asiento. Desde el servicio que amamos, **Xbox Game Pass**, hasta las novedades que perfilan el futuro del gaming, ¡aquí les traemos todo lo que necesitan saber!
