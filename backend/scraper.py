@@ -18,15 +18,24 @@ def fetch_latest_news():
         })
     return articles
 
-def extract_article_content(url):
-    """Attempts to extract the main text content from a URL."""
+def extract_article_data(url):
+    """Attempts to extract the main text content and lead image from a URL."""
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
         response = requests.get(url, timeout=10, headers=headers)
         soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Extract text
         paragraphs = soup.find_all('p')
         content = "\n".join([p.get_text() for p in paragraphs if len(p.get_text()) > 20])
-        return content
+        
+        # Extract image (Open Graph image is usually the best lead image)
+        image_url = ""
+        og_image = soup.find("meta", property="og:image")
+        if og_image:
+            image_url = og_image.get("content", "")
+        
+        return content, image_url
     except Exception as e:
         print(f"Error extrayendo {url}: {e}")
-        return ""
+        return "", ""

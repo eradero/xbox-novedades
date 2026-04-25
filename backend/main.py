@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv() # Load variables from .env file
 
-from scraper import fetch_latest_news, extract_article_content
+from scraper import fetch_latest_news, extract_article_data
 from ai_writer import generate_blog_post
 
 HISTORY_FILE = "history.json"
@@ -46,8 +46,8 @@ def main():
             
         print(f"Procesando nuevo artículo: {article['title']}")
         
-        # 1. Extraer contenido de la URL
-        content = extract_article_content(article["link"])
+        # 1. Extraer contenido e imagen de la URL
+        content, real_image_url = extract_article_data(article["link"])
         if not content:
             print("Advertencia: No se pudo extraer contenido. Usando solo el título.")
             content = "Contenido no disponible para extracción automática."
@@ -58,22 +58,24 @@ def main():
             print("Fallo la generación de IA. Saltando...")
             continue
             
-        # 3. Descargar imagen de Pollinations.ai
+        # 3. Descargar imagen real
         slug = slugify(generated_data["title"])
-        image_prompt = urllib.parse.quote(generated_data["image_prompt"])
-        image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?nologo=true"
         image_path = f"/images/{slug}.jpg"
         full_image_path = os.path.join("frontend/public", f"images/{slug}.jpg")
         
         try:
-            print(f"Descargando imagen para: {slug}")
             os.makedirs(os.path.dirname(full_image_path), exist_ok=True)
-            img_response = requests.get(image_url, timeout=20)
-            if img_response.status_code == 200:
-                with open(full_image_path, "wb") as f:
-                    f.write(img_response.content)
+            if real_image_url:
+                print(f"Descargando imagen real para: {slug}")
+                img_response = requests.get(real_image_url, timeout=20)
+                if img_response.status_code == 200:
+                    with open(full_image_path, "wb") as f:
+                        f.write(img_response.content)
+                else:
+                    image_path = "" # Fallback
             else:
-                image_path = "" # Fallback if image fails
+                print("No se encontró imagen real. Usando placeholder.")
+                image_path = "" # Astro will use fallback if defined
         except Exception as e:
             print(f"Error descargando imagen: {e}")
             image_path = ""
