@@ -101,6 +101,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<hr />
 					</div>
 					<slot />
+                    <div style="margin-top: 4rem;">
+                        <hr />
+                        <h2 style="text-align: center; margin-bottom: 2rem;">Comentarios</h2>
+                        <script src="https://utteranc.es/client.js"
+                                repo="eradero/xbox-novedades"
+                                issue-term="pathname"
+                                label="comments"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+
 				</div>
 			</article>
 		</main>
