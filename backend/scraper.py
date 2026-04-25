@@ -35,7 +35,9 @@ def extract_article_data(url):
         image_url = ""
         og_image = soup.find("meta", property="og:image")
         if og_image:
-            image_url = og_image.get("content", "")
+            candidate = og_image.get("content", "")
+            if candidate and "googleusercontent.com" not in candidate and "gstatic.com" not in candidate:
+                image_url = candidate
         
         return content, image_url
     except Exception as e:

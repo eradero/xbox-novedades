@@ -12,7 +12,7 @@ from scraper import fetch_latest_news, extract_article_data
 from ai_writer import generate_blog_post
 
 HISTORY_FILE = "history.json"
-BLOG_POSTS_DIR = "frontend/src/content/blog"
+BLOG_POSTS_DIR = "../frontend/src/content/blog"
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -61,7 +61,7 @@ def main():
         # 3. Determinar imagen (1. Real de la noticia, 2. Internet, 3. IA)
         slug = slugify(generated_data["title"])
         image_path = f"/images/{slug}.jpg"
-        full_image_path = os.path.join("frontend/public", f"images/{slug}.jpg")
+        full_image_path = os.path.join("../frontend/public", f"images/{slug}.jpg")
         
         try:
             os.makedirs(os.path.dirname(full_image_path), exist_ok=True)
