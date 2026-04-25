@@ -51,20 +51,18 @@ const posts = (await getCollection('blog')).sort(
 			ul li a {
 				display: block;
 				text-decoration: none;
-				transition: 0.3s ease;
+				transition: 0.2s ease;
 				height: 100%;
-				padding: 1.5rem;
-				border-radius: 16px;
-				background: var(--glass-bg);
-				backdrop-filter: blur(12px);
-				-webkit-backdrop-filter: blur(12px);
-				border: 1px solid var(--glass-border);
-				box-shadow: var(--box-shadow);
+				padding: 0;
+				border-radius: 4px;
+				background: #111111;
+				border: 1px solid #222222;
+				overflow: hidden;
 			}
 			ul li a:hover {
-				transform: translateY(-5px);
+				transform: scale(1.02);
 				border-color: var(--accent);
-				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
 			}
 			ul li:first-child {
 				width: 100%;
@@ -81,20 +79,23 @@ const posts = (await getCollection('blog')).sort(
 				font-size: 2.369rem;
 			}
 			.title {
-				margin: 0 0 0.5rem 0;
+				margin: 0;
+				padding: 1rem 1.5rem 0.5rem 1.5rem;
 				color: #ffffff;
 				line-height: 1.3;
-				transition: color 0.2s;
+				font-size: 1.5rem;
 			}
 			.date {
 				margin: 0;
+				padding: 0 1.5rem;
 				color: var(--accent);
-				font-size: 0.9em;
-				font-weight: 600;
+				font-size: 0.85em;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 			.description {
-				color: var(--text-secondary);
-				margin-top: 0.5rem;
+				color: #cccccc;
+				padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 				font-size: 0.95em;
 			}
 			ul li a:hover .title {
