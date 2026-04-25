@@ -2,7 +2,7 @@
 title: '¡La Nueva Ola de Emoción Llega a Xbox Game Pass: Hades II, DayZ y Mucho Más te Esperan!'
 description: 'Descubre los emocionantes títulos que llegan pronto a Xbox Game Pass, incluyendo Hades II, DayZ, Planet Coaster 2 y Replaced, expandiendo tu biblioteca de juegos.'
 pubDate: 'Apr 25 2026'
-heroImage: ''
+heroImage: 'https://images.unsplash.com/photo-1605906302474-3c738c2a97e6?q=80&w=1024'
 ---
 
 ¡Hola, Xbox Family! Prepárense porque el universo Xbox no para de girar, y esta vez, ¡la estación Game Pass viene cargada hasta los topes de novedades que os van a volar la cabeza! Estamos hablando de esa sensación inigualable de descubrir vuestro próximo juego favorito, y el equipo de Xbox Game Pass se ha superado una vez más para que vuestra biblioteca esté siempre fresca y llena de aventuras.
