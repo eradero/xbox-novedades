@@ -79,7 +79,9 @@ def search_internet_image(query, extra_term=""):
                 data = json.loads(m)
                 img_url = data.get("murl")
                 if img_url and img_url.startswith("http") and is_valid_image(img_url):
-                    return img_url
+                    import re
+                    clean_url = re.sub(r'^https?://', '', img_url)
+                    return f"https://wsrv.nl/?url={clean_url}"
         return ""
     except Exception as e:
         print(f"Error buscando imagen en internet: {e}")

@@ -2,7 +2,7 @@
 title: '¡Game Pass se Enciende con Nuevas Aventuras y el Universo Xbox Sigue Expandiendo sus Horizontes!'
 description: 'Descubre las últimas incorporaciones a Xbox Game Pass, los próximos lanzamientos emocionantes y todas las novedades que hacen vibrar a la comunidad Xbox.'
 pubDate: 'Apr 24 2026'
-heroImage: 'https://generacionxbox.com/wp-content/uploads/2025/11/la-semana-que-viene-fortnite-crew-se-une-a-xbox-game-pass-con-todos-estos-anadidos-mensuales.png'
+heroImage: 'https://wsrv.nl/?url=generacionxbox.com/wp-content/uploads/2025/11/la-semana-que-viene-fortnite-crew-se-une-a-xbox-game-pass-con-todos-estos-anadidos-mensuales.png'
 ---
 
 ¡Hola, Spartans, Jefes Maestros, Corredores y Exploradores del Universo Xbox!
