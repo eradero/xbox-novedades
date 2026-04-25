@@ -2,7 +2,7 @@
 title: 'Xbox Developer_Direct 2026: ¡El Futuro Es Ahora! Revelaciones Épicas, Game Pass al Máximo y la Sorpresa de Double Fine que No Viste Venir'
 description: 'Descubre todos los bombazos del Xbox Developer_Direct 2026, incluyendo el nuevo juego de Double Fine, actualizaciones de Game Pass y el futuro de Xbox.'
 pubDate: 'Apr 25 2026'
-heroImage: 'https://images.unsplash.com/photo-1585504198199-20277593b94f?q=80&w=1024'
+heroImage: 'https://generacionxbox.com/wp-content/uploads/2025/12/que-podemos-esperar-del-xbox-developer-direct-de-enero-el-evento-que-marcara-el-rumbo-de-xbox-en-2026.png'
 ---
 
 ¡Gamers, el futuro de Xbox ya está aquí, y es más emocionante de lo que imaginábamos! El **Xbox Developer_Direct 2026** nos ha dejado boquiabiertos con una oleada de anuncios que redefinen la experiencia de juego en los próximos años. Desde nuevas IPs revolucionarias hasta actualizaciones masivas para Game Pass, la energía que se respiraba era electrificante. ¡Prepárense para un resumen completo de todo lo que se reveló!

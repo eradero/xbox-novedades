@@ -44,6 +44,23 @@ def extract_article_data(url):
         print(f"Error extrayendo {url}: {e}")
         return "", ""
 
+
+def is_valid_image(url):
+    if not url: return False
+    url_lower = url.lower()
+    
+    # Ignorar imágenes de Google News (miniaturas de baja calidad)
+    if "googleusercontent.com" in url_lower or "gstatic.com" in url_lower:
+        return False
+        
+    # Ignorar imágenes que parecen ser miniaturas por su URL (ej: s150, w300)
+    import re
+    if re.search(r'[=s](1|2|3)00', url_lower): # s100, s200, s300 etc
+        return False
+
+    bad_words = ['logo', 'avatar', 'icon', 'profile', 'default', 'placeholder', 'blank', 'header-bg', 'newsletter', 'button']
+    return not any(word in url_lower for word in bad_words)
+
 def search_internet_image(query, extra_term=""):
     """Searches for an image on the internet (Bing) as a fallback."""
     try:

@@ -2,7 +2,7 @@
 title: 'Xbox Partner Preview Noviembre 2025: ¡El Futuro de los Juegos Desplegado por Nuestros Increíbles Socios!'
 description: 'Descubre las últimas joyas de los juegos, las novedades de Game Pass y el emocionante futuro que nuestros socios traen al universo Xbox.'
 pubDate: 'Apr 25 2026'
-heroImage: 'https://images.unsplash.com/photo-1585504198199-20277593b94f?q=80&w=1024'
+heroImage: 'https://xboxwire.thesourcemediaassets.com/sites/4/XPP-Nov-25-Announce-7b0ff085baca495561bb-1536x864-1-14410cca2f2704f98eb5.jpg'
 ---
 
 ¡Qué tal, Xboxers!
