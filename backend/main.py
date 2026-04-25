@@ -17,7 +17,8 @@ BLOG_POSTS_DIR = "../frontend/src/content/blog"
 def load_history():
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r") as f:
-            return json.load(f)
+            data = json.load(f)
+        return [item if isinstance(item, dict) else {"link": item, "title": ""} for item in data]
     return []
 
 def save_history(history):
@@ -28,6 +29,25 @@ def slugify(text):
     text = text.lower()
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
+
+
+def is_duplicate(title, history):
+    title_words = set(re.findall(r"\w+", title.lower()))
+    if len(title_words) < 4: return False
+    # Ignorar palabras comunes
+    stop_words = {'de', 'la', 'en', 'el', 'un', 'una', 'con', 'por', 'para', 'que', 'y', 'los', 'las'}
+    title_words = {w for w in title_words if w not in stop_words}
+    
+    for item in history:
+        if isinstance(item, dict) and item.get("title"):
+            h_words = set(re.findall(r"\w+", item["title"].lower()))
+            h_words = {w for w in h_words if w not in stop_words}
+            if not h_words: continue
+            intersection = title_words.intersection(h_words)
+            overlap = len(intersection) / min(len(title_words), len(h_words))
+            if overlap > 0.6: # 60% de coincidencia en palabras clave
+                return True
+    return False
 
 def main():
     print("Iniciando proceso automático de blog...")
@@ -40,7 +60,7 @@ def main():
         return
         
     for article in articles:
-        if article["link"] in history:
+        if any(isinstance(h, dict) and h.get("link") == article["link"] for h in history) or is_duplicate(article["title"], history):
             print(f"Saltando artículo ya procesado: {article['title']}")
             continue
             
@@ -119,7 +139,7 @@ heroImage: '{image_path}'
         print(f"Guardado exitosamente: {file_path}")
         
         # 4. Actualizar historial
-        history.append(article["link"])
+        history.append({"link": article["link"], "title": article["title"]})
         save_history(history)
         
 
