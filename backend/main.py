@@ -91,9 +91,18 @@ def main():
             
             # Capa 2: Buscar en internet si la capa 1 falló
             if not final_image_url:
-                print(f"No se encontró imagen en la noticia. Buscando en internet para: {article['title']}")
                 from scraper import search_internet_image
+                # Intento 1: Título original
                 final_image_url = search_internet_image(article["title"])
+                
+                # Intento 2: Con términos de calidad si falló el 1
+                if not final_image_url:
+                    final_image_url = search_internet_image(article["title"], "official wallpaper high res")
+            
+            # Capa 2.5: Imagen Genérica de Calidad (No IA)
+            if not final_image_url:
+                print("No se encontró imagen específica. Usando imagen genérica oficial.")
+                final_image_url = "https://images.unsplash.com/photo-1621259182978-fbf9ad132d88?q=80&w=1024"
                 
             # Capa 3: Generar con IA si las anteriores fallaron
             if not final_image_url:
