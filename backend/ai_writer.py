@@ -59,8 +59,8 @@ def generate_blog_post(original_title, original_content):
         except Exception as e:
             print(f"Error con la API de Gemini (intento {attempt + 1}/{max_retries}): {e}")
             if attempt < max_retries - 1:
-                print("Esperando 10 segundos antes de reintentar...")
-                time.sleep(10)
+                print("Esperando 30 segundos antes de reintentar...")
+                time.sleep(30)
             else:
                 print("Se superó el límite de reintentos.")
                 return None
