@@ -58,29 +58,40 @@ def main():
             print("Fallo la generación de IA. Saltando...")
             continue
             
-        # 3. Determinar imagen (Real o Generada por IA)
+        # 3. Determinar imagen (1. Real de la noticia, 2. Internet, 3. IA)
         slug = slugify(generated_data["title"])
         image_path = f"/images/{slug}.jpg"
         full_image_path = os.path.join("frontend/public", f"images/{slug}.jpg")
         
         try:
             os.makedirs(os.path.dirname(full_image_path), exist_ok=True)
-            if not real_image_url:
+            
+            # Capa 1: Imagen real de la noticia
+            final_image_url = real_image_url
+            
+            # Capa 2: Buscar en internet si la capa 1 falló
+            if not final_image_url:
+                print(f"No se encontró imagen en la noticia. Buscando en internet para: {article['title']}")
+                from scraper import search_internet_image
+                final_image_url = search_internet_image(article["title"])
+                
+            # Capa 3: Generar con IA si las anteriores fallaron
+            if not final_image_url:
                 print(f"No se encontró imagen real. Generando imagen con IA para: {slug}")
                 image_prompt = urllib.parse.quote(generated_data["image_prompt"] + ", xbox style, high quality, 4k")
-                real_image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?model=flux&nologo=true&width=1024&height=576"
+                final_image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?model=flux&nologo=true&width=1024&height=576"
             
-            print(f"Descargando imagen para: {slug}")
+            print(f"Descargando imagen final: {final_image_url}")
             # Headers to avoid blocks
             headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-            img_response = requests.get(real_image_url, timeout=30, headers=headers)
+            img_response = requests.get(final_image_url, timeout=30, headers=headers)
             
             if img_response.status_code == 200:
                 with open(full_image_path, "wb") as f:
                     f.write(img_response.content)
             else:
-                print(f"Fallo al descargar la imagen. Status {img_response.status_code}")
-                image_path = "" # Fallback if image fails
+                print(f"Fallo descarga. Usando placeholder.")
+                image_path = "" # Fallback
         except Exception as e:
             print(f"Error gestionando imagen: {e}")
             image_path = ""

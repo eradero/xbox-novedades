@@ -1,3 +1,5 @@
+import urllib.parse
+import json
 import feedparser
 from bs4 import BeautifulSoup
 import requests
@@ -39,3 +41,26 @@ def extract_article_data(url):
     except Exception as e:
         print(f"Error extrayendo {url}: {e}")
         return "", ""
+
+def search_internet_image(query):
+    """Searches for an image on the internet (Bing) as a fallback."""
+    try:
+        print(f"Buscando imagen en internet para: {query}")
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
+        url = f"https://www.bing.com/images/search?q={urllib.parse.quote(query)}"
+        response = requests.get(url, headers=headers, timeout=10)
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        # Bing images are in <a> tags with class "iusc"
+        import json
+        for a in soup.find_all("a", class_="iusc"):
+            m = a.get("m")
+            if m:
+                data = json.loads(m)
+                img_url = data.get("murl")
+                if img_url and img_url.startswith("http"):
+                    return img_url
+        return ""
+    except Exception as e:
+        print(f"Error buscando imagen en internet: {e}")
+        return ""
