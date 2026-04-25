@@ -120,7 +120,7 @@ def main():
                     f.write(img_response.content)
             else:
                 print(f"Fallo descarga. Usando placeholder.")
-                image_path = "" # Fallback
+                image_path = "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=1024"
         except Exception as e:
             print(f"Error gestionando imagen: {e}")
             image_path = ""
