@@ -12,7 +12,7 @@ from scraper import fetch_latest_news, extract_article_content
 from ai_writer import generate_blog_post
 
 HISTORY_FILE = "history.json"
-BLOG_POSTS_DIR = "../frontend/src/content/blog"
+BLOG_POSTS_DIR = "frontend/src/content/blog"
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -63,7 +63,7 @@ def main():
         image_prompt = urllib.parse.quote(generated_data["image_prompt"])
         image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?nologo=true"
         image_path = f"/images/{slug}.jpg"
-        full_image_path = os.path.join("../frontend/public", f"images/{slug}.jpg")
+        full_image_path = os.path.join("frontend/public", f"images/{slug}.jpg")
         
         try:
             print(f"Descargando imagen para: {slug}")
