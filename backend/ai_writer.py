@@ -15,7 +15,7 @@ def generate_blog_post(original_title, original_content):
         Genera una entrada de blog sobre las últimas novedades del universo Xbox. El estilo debe ser moderno, dinámico y entusiasta, similar al tono de comunicación oficial de Xbox. Incluye información sobre lanzamientos de juegos recientes o futuros, actualizaciones de Game Pass, anuncios de hardware o eventos importantes de la comunidad Xbox.
         Reescribe y expande la siguiente noticia para un blog especializado.
         Usa un tono informativo, profesional pero fácil de entender.
-        Usa formato Markdown. IMPORTANTE: Si mencionas precios, úsalos SIEMPRE en Dólares (USD) o Pesos Argentinos (ARS), NUNCA en Euros.
+        Usa formato Markdown. IMPORTANTE: Si mencionas precios, úsalos SIEMPRE en Dólares (USD) o Pesos Argentinos (ARS), NUNCA en Euros. IMPORTANTE: Si mencionas precios, úsalos SIEMPRE en Dólares (USD) o Pesos Argentinos (ARS), NUNCA en Euros.
         
         Título original: {original_title}
         
