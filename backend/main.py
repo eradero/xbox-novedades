@@ -133,6 +133,7 @@ title: '{generated_data["title"].replace("'", "''")}'
 description: '{generated_data["description"].replace("'", "''")}'
 pubDate: '{today}'
 heroImage: '{image_path}'
+affiliateLink: '{generated_data["affiliateLink"]}'
 ---
 
 {generated_data["content"]}
