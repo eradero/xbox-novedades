@@ -30,7 +30,7 @@ def generate_blog_post(original_title, original_content):
         [PROMPT_IMAGEN]
         (Oración en inglés para IA)
         [AFFILIATE_LINK]
-        (Genera un link de búsqueda de Amazon para el juego y la consola Xbox Series X)
+        (Genera un link de búsqueda de Amazon para el juego y la consola Xbox Series X. IMPORTANTE: El link DEBE terminar con &tag=blogseradero-20 para que sea válido)
         [CONTENIDO]
         (Cuerpo del artículo en Markdown)
         """
