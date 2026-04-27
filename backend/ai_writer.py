@@ -14,7 +14,7 @@ def generate_blog_post(original_title, original_content):
     prompt = f"""
         Eres un periodista experto en videojuegos. Reescribe la noticia para un blog fan de Xbox Series X con tono entusiasta y amigable.
         Usa un tono informativo, profesional pero fácil de entender.
-        Usa formato Markdown. IMPORTANTE: Si mencionas precios, úsalos SIEMPRE en Dólares (USD) o Pesos Argentinos (ARS), NUNCA en Euros.
+        Usa formato Markdown. IMPORTANTE: Escribe siempre en Español Latinoamericano de Argentina (es-AR), usando el voseo ("tenés", "jugá", "mirá"). NUNCA escribas en español de España (es-es) ni uses "vosotros". IMPORTANTE: Si mencionas precios, úsalos SIEMPRE en Dólares (USD) o Pesos Argentinos (ARS), NUNCA en Euros.
         
         Título original: {original_title}
         
