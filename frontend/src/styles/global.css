@@ -139,3 +139,10 @@ hr {
 	white-space: nowrap;
 	border: 0;
 }
+
+body {
+    background-image: url('/images/xbox-background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
