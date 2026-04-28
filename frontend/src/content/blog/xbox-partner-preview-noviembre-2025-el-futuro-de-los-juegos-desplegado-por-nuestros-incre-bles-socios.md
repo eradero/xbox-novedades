@@ -31,7 +31,7 @@ El Partner Preview fue un escaparate brillante para títulos que empujan los lí
 Game Pass continúa siendo el corazón de la experiencia Xbox, y el Partner Preview no decepcionó con nuevas incorporaciones que harán tu biblioteca aún más robusta:
 
 *   **¡Lanzamiento Inmediato! Pixel Oasis (IndieVerse Collective)**
-    *   La gran sorpresa de la noche fue el anuncio y **lanzamiento inmediato** de **Pixel Oasis**, un encantador juego de construcción y gestión de ciudades con un estilo pixel art único. Sumérgete en la creación de tu propia metrópolis utópica desde hoy mismo, ¡disponible en **Game Pass** ahora!
+    *   La gran sorpresa de la nofue el anuncio y **lanzamiento inmediato** de **Pixel Oasis**, un encantador juego de construcción y gestión de ciudades con un estilo pixel art único. Sumérgete en la creación de tu propia metrópolis utópica desde hoy mismo, ¡disponible en **Game Pass** ahora!
 *   **Y Esto es Solo el Comienzo...**
     *   Además de *Aethelgard: El Último Centinela* y *Pixel Oasis* uniéndose a la familia de Game Pass, se confirmaron más títulos emocionantes que se añadirán a la colección a finales de 2025 y principios de 2026. ¡Mantente atento a nuestros canales para conocer las próximas oleadas de juegos que llegarán directo a tu suscripción!
 

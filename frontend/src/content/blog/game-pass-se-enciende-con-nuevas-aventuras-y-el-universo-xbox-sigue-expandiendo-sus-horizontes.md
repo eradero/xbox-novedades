@@ -17,7 +17,7 @@ La biblioteca de Xbox Game Pass, ese tesoro que amamos, sigue expandiéndose con
 
 *   **Kiln**: ¿Eres de los que disfrutan la emoción de la supervivencia y la creación en un mundo misterioso? Kiln te sumerge en un universo forjado por elementos, donde la estrategia y la exploración son clave para dominar un entorno hostil y descubrir sus secretos ancestrales. ¡Prepárate para forjar tu propio destino en este intrigante título!
 
-*   **Vampire Crawlers**: Si lo tuyo son los combates frenéticos, la progresión adictiva y las mazmorras llenas de peligros, esta propuesta es para ti. Lidera a un grupo de cazadores nocturnos a través de criptas infestadas de criaturas sobrenaturales, mejora tus habilidades y prepárate para enfrentarte al mismísimo Señor de la Noche en este roguelike con sabor a sangre fresca y acción sin pausa.
+*   **Vampire Crawlers**: Si lo tuyo son los combates frenéticos, la progresión adictiva y las mazmorras llenas de peligros, esta propuesta es para ti. Lidera a un grupo de cazadores nocturnos a través de criptas infestadas de criaturas sobrenaturales, mejora tus habilidades y prepárate para enfrentarte al mismísimo Señor de la Noen este roguelike con sabor a sangre fresca y acción sin pausa.
 
 *   **Aphelion**: Embárcate en una odisea espacial épica. Aphelion te lanza a los confines de una galaxia inexplorada, donde cada decisión cuenta. Con una narrativa profunda, personajes memorables y combates tácticos, esta aventura de ciencia ficción promete transportarte a horizontes inimaginables mientras desvelas los misterios de un planeta lejano y sus antiguos habitantes.
 
