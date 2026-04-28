@@ -38,4 +38,4 @@ jobs:
         git config --global user.name 'GitHub Action Bot'
         git config --global user.email 'action@github.com'
         git add .
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: Nuevas noticias de Xbox agregadas" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: Nuevas noticias de Xbox agregadas" && git pull --rebase && git push)
