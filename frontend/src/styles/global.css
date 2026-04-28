@@ -123,8 +123,8 @@ hr {
 body {
     background-color: #050505;
     background-image: url('/images/xbox-background.jpg');
-    background-size: 600px;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
