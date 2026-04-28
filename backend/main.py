@@ -31,25 +31,39 @@ def slugify(text):
     return text.strip('-')
 
 
+
 def is_duplicate(title, history):
     title_words = set(re.findall(r"\w+", title.lower()))
     if len(title_words) < 4: return False
+    
     # Ignorar palabras comunes
-    stop_words = {'de', 'la', 'en', 'el', 'un', 'una', 'con', 'por', 'para', 'que', 'y', 'los', 'las'}
+    stop_words = {'de', 'la', 'en', 'el', 'un', 'una', 'con', 'por', 'para', 'que', 'y', 'los', 'las', 'sobre', 'del', 'con', 'para'}
     title_words = {w for w in title_words if w not in stop_words}
     
-    for item in history + [{"title": f.replace("-", " ")} for f in os.listdir(BLOG_POSTS_DIR) if f.endswith(".md")]:
+    # 1. Verificar contra archivos en el disco (por si history.json no está al día)
+    existing_titles = []
+    if os.path.exists(BLOG_POSTS_DIR):
+        for f in os.listdir(BLOG_POSTS_DIR):
+            if f.endswith(".md"):
+                existing_titles.append(f.replace("-", " ").replace(".md", ""))
+    
+    # 2. Combinar historial y archivos físicos
+    check_list = history + [{"title": t} for t in existing_titles]
+    
+    for item in check_list:
         if isinstance(item, dict) and item.get("title"):
             h_words = set(re.findall(r"\w+", item["title"].lower()))
             h_words = {w for w in h_words if w not in stop_words}
             if not h_words: continue
+            
             intersection = title_words.intersection(h_words)
-            overlap = len(intersection) / min(len(title_words), len(h_words))
-            if overlap > 0.6: # 60% de coincidencia en palabras clave
+            if not title_words: continue
+            overlap = len(intersection) / len(title_words)
+            
+            if overlap > 0.5: # Si el 50% de las palabras del título nuevo ya existen en uno viejo
                 return True
     return False
-
-def main():
+\\ndef main():
     print("Iniciando proceso automático de blog...")
     history = load_history()
     
