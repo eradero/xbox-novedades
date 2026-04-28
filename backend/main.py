@@ -63,7 +63,7 @@ def is_duplicate(title, history):
             if overlap > 0.5: # Si el 50% de las palabras del título nuevo ya existen en uno viejo
                 return True
     return False
-\\ndef main():
+def main():
     print("Iniciando proceso automático de blog...")
     history = load_history()
     
