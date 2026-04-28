@@ -8,7 +8,7 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, affiliateLink } = Astro.props;
 ---
 
 <html lang="es-AR">
@@ -101,6 +101,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<hr />
 					</div>
 					<slot />
+                    
+                    {affiliateLink && (
+                        <div class="affiliate-cta" style="margin-top: 3rem; padding: 2rem; border: 2px dashed #107C10; border-radius: 16px; text-align: center; background: rgba(16, 124, 16, 0.05);">
+                            <h3 style="margin-bottom: 1rem; color: #107C10;">¡Equipate como un verdadero Gamer!</h3>
+                            <p style="margin-bottom: 1.5rem;">Aprovechá las mejores ofertas en consolas, juegos y accesorios de Xbox en Amazon.</p>
+                            <a href={affiliateLink} target="_blank" rel="noopener noreferrer" 
+                               style="display: inline-block; background: #107C10; color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: transform 0.2s ease;">
+                                🛒 Ver Ofertas en Amazon
+                            </a>
+                        </div>
+                    )}
                     
                     <div class="comments-container" style="margin-top: 5rem; padding: 2rem; border-top: 4px solid #107C10; background: rgba(0,0,0,0.02); border-radius: 12px;">
                         <h2 style="text-align: center; margin-bottom: 2rem; color: #107C10; font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: 2px;">
