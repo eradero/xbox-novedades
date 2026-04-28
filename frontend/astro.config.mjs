@@ -6,8 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://eradero.github.io',
-	base: '/xbox-novedades/',
+	site: 'https://xbox-novedades.vercel.app',
+	base: '/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{

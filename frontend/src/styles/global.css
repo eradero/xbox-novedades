@@ -121,9 +121,10 @@ hr {
 
 
 body {
-    background-color: #107c10;
-    background-image: url('/xbox-novedades/images/xbox-background.jpg');
-    background-size: cover;
+    background-color: #050505;
+    background-image: url('/images/xbox-background.jpg');
+    background-size: 600px;
+    background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
 }
