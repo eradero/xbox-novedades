@@ -61,5 +61,5 @@ def generate_blog_post(original_title, original_content):
             
         except Exception as e:
             print(f"Error con la API de Gemini: {e}")
-            time.sleep(10)
+            time.sleep(25)
     return None
