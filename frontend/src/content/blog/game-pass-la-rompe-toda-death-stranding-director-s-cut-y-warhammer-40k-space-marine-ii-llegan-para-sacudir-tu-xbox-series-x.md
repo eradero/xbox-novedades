@@ -2,7 +2,7 @@
 title: '¡Game Pass la rompe toda! Death Stranding Director’s Cut y Warhammer 40K: Space Marine II llegan para sacudir tu Xbox Series X'
 description: 'Preparate para una avalancha de juegazos en Xbox Game Pass. Sumate a la aventura con Death Stranding Director’s Cut y aniquilá enemigos en Warhammer 40,000: Space Marine II. ¡Tu Xbox Series X te lo agradece!'
 pubDate: 'Apr 29 2026'
-heroImage: '/images/game-pass-la-rompe-toda-death-stranding-director-s-cut-y-warhammer-40k-space-marine-ii-llegan-para-sacudir-tu-xbox-series-x.jpg'
+heroImage: '/images/space-marine-2-hero.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+games&tag=blogseradero-20'
 ---
 
