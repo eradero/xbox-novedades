@@ -44,8 +44,8 @@ const { title, description, pubDate, updatedDate, heroImage, affiliateLink } = A
 				padding: 3em;
 				color: var(--text-primary);
 				background: var(--glass-bg);
-				backdrop-filter: blur(16px);
-				-webkit-backdrop-filter: blur(16px);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
 				border: 1px solid var(--glass-border);
 				border-radius: 20px;
 				box-shadow: var(--box-shadow);
@@ -103,18 +103,18 @@ const { title, description, pubDate, updatedDate, heroImage, affiliateLink } = A
 					<slot />
                     
                     {affiliateLink && (
-                        <div class="affiliate-cta" style="margin-top: 3rem; padding: 2rem; border: 2px dashed #107C10; border-radius: 16px; text-align: center; background: rgba(16, 124, 16, 0.05);">
-                            <h3 style="margin-bottom: 1rem; color: #107C10;">¡Equipate como un verdadero Gamer!</h3>
-                            <p style="margin-bottom: 1.5rem;">Aprovechá las mejores ofertas en consolas, juegos y accesorios de Xbox en Amazon.</p>
+                        <div class="affiliate-cta" style="margin-top: 3rem; padding: 2rem; border: 2px dashed var(--accent); border-radius: 16px; text-align: center; background: rgba(155, 240, 11, 0.1);">
+                            <h3 style="margin-bottom: 1rem; color: var(--accent);">¡Equipate como un verdadero Gamer!</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-primary);">Aprovechá las mejores ofertas en consolas, juegos y accesorios de Xbox en Amazon.</p>
                             <a href={affiliateLink} target="_blank" rel="noopener noreferrer" 
-                               style="display: inline-block; background: #107C10; color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: transform 0.2s ease;">
+                               style="display: inline-block; background: var(--accent-dark); color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: transform 0.2s ease; box-shadow: 0 4px 15px rgba(16, 124, 16, 0.4);">
                                 🛒 Ver Ofertas en Amazon
                             </a>
                         </div>
                     )}
                     
-                    <div class="comments-container" style="margin-top: 5rem; padding: 2rem; border-top: 4px solid #107C10; background: rgba(0,0,0,0.02); border-radius: 12px;">
-                        <h2 style="text-align: center; margin-bottom: 2rem; color: #107C10; font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: 2px;">
+                    <div class="comments-container" style="margin-top: 5rem; padding: 2rem; border-top: 4px solid var(--accent); background: rgba(255,255,255,0.02); border-radius: 12px;">
+                        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--accent); font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: 2px;">
                             Comunidad Xbox
                         </h2>
                         <script src="https://utteranc.es/client.js"

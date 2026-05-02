@@ -7,11 +7,11 @@
 	--gray: 40, 40, 40;
 	--gray-light: 220, 220, 220;
 	--gray-dark: 10, 10, 10;
-	--glass-bg: #111111;
-	--glass-border: #222222;
+	--glass-bg: rgba(255, 255, 255, 0.2);
+	--glass-border: rgba(255, 255, 255, 0.4);
 	--text-primary: #ffffff;
 	--text-secondary: #f0f0f0;
-	--box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+	--box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 
@@ -28,11 +28,12 @@
 
 /* Glassmorphism utility */
 .glass-panel {
-	background: rgba(17, 17, 17, 0.8);
+	background: var(--glass-bg);
 	border: 1px solid var(--glass-border);
 	border-radius: 12px;
 	box-shadow: var(--box-shadow);
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
