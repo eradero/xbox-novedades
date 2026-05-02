@@ -7,11 +7,11 @@
 	--gray: 40, 40, 40;
 	--gray-light: 220, 220, 220;
 	--gray-dark: 10, 10, 10;
-	--glass-bg: rgba(255, 255, 255, 0.2);
-	--glass-border: rgba(255, 255, 255, 0.4);
+	--glass-bg: rgba(0, 0, 0, 0.4);
+	--glass-border: rgba(155, 240, 11, 0.2);
 	--text-primary: #ffffff;
 	--text-secondary: #f0f0f0;
-	--box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+	--box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
 
