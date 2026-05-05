@@ -106,7 +106,7 @@ def main():
             # Verificación de relevancia (Evitar logos de sitios, ads, etc)
             if final_image_url:
                 from ai_writer import verify_image_relevance
-                if not verify_image_relevance(final_image_url, generated_data["title"]):
+                if not verify_image_relevance(final_image_url, generated_data["title"], generated_data.get("description", "")):
                     print(f"Imagen original rechazada por falta de relevancia: {final_image_url}")
                     final_image_url = ""
             

@@ -64,42 +64,47 @@ def generate_blog_post(original_title, original_content):
             print(f"Error con la API de Gemini: {e}")
             time.sleep(10)
     return None
-def verify_image_relevance(image_url, post_title):
-    """Uses Gemini to check if an image URL is relevant to the blog post title."""
+def verify_image_relevance(image_url, post_title, post_description=""):
+    """Usa Gemini Vision para verificar que el contenido visual de la imagen sea relevante al post."""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        return True # Default to True if no API key
-    
+        return True
+
     client = genai.Client(api_key=api_key)
-    
-    prompt = f"Is this image relevant to a blog post titled '{post_title}'? Answer only YES or NO."
-    
+
     try:
-        # Fetch the image
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-        response = requests.get(image_url, timeout=10, headers=headers)
-        if response.status_code != 200:
+        img_response = requests.get(image_url, timeout=10, headers=headers)
+        if img_response.status_code != 200:
             return False
-        
-        # In a real scenario, we would pass the image bytes to Gemini.
-        # For now, we will use a simpler check: ask Gemini based on the URL and Title
-        # because passing bytes requires a different API call structure in genai.
-        
-        check_prompt = f"""
-        Analiza si esta URL de imagen parece tener relación con el título del post.
-        Título: {post_title}
-        URL: {image_url}
-        
-        Responde 'SÍ' si la URL contiene palabras clave relacionadas o parece ser una imagen de prensa/juego válida.
-        Responde 'NO' si parece ser un anuncio, un logo genérico de una web de noticias (como '3djuegos-logo'), o un avatar.
-        Responde solo SÍ o NO.
-        """
-        
+
+        mime_type = img_response.headers.get("Content-Type", "image/jpeg").split(";")[0].strip()
+        if not mime_type.startswith("image/"):
+            mime_type = "image/jpeg"
+
+        from google.genai import types
+        desc_line = f"Descripción: {post_description}" if post_description else ""
+        check_prompt = f"""Analizá visualmente esta imagen y determiná si tiene relación con el siguiente artículo de blog:
+
+Título: {post_title}
+{desc_line}
+
+La imagen ES relevante si muestra elementos relacionados con el tema (consolas, videojuegos, tecnología, IA, personajes, logos, escenas del juego, etc.).
+La imagen NO es relevante si muestra: documentos de texto, facturas, gráficos de ventas genéricos, vehículos sin contexto gamer, logos de empresas ajenas, trabajos escolares, o cualquier cosa completamente fuera de tema.
+
+Respondé solo: SÍ o NO."""
+
         response = client.models.generate_content(
             model="gemini-2.5-flash",
-            contents=check_prompt,
+            contents=[
+                types.Part.from_bytes(data=img_response.content, mime_type=mime_type),
+                check_prompt,
+            ],
         )
-        return "SÍ" in response.text.upper()
+        is_relevant = "SÍ" in response.text.strip().upper() or response.text.strip().upper().startswith("SI")
+        if not is_relevant:
+            print(f"  Imagen rechazada por Gemini Vision: no es relevante para '{post_title[:60]}'")
+        return is_relevant
     except Exception as e:
-        print(f"Error verificando imagen: {e}")
-        return True # Fallback to True
+        print(f"Error verificando imagen con Gemini Vision: {e}")
+        return True
