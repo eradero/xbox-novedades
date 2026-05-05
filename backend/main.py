@@ -36,8 +36,10 @@ def is_duplicate(title, history):
     title_words = set(re.findall(r"\w+", title.lower()))
     if len(title_words) < 4: return False
     
-    # Ignorar palabras comunes
-    stop_words = {'de', 'la', 'en', 'el', 'un', 'una', 'con', 'por', 'para', 'que', 'y', 'los', 'las', 'sobre', 'del', 'con', 'para'}
+    # Ignorar palabras comunes + términos genéricos del dominio que aparecen en todos los artículos
+    stop_words = {'de', 'la', 'en', 'el', 'un', 'una', 'con', 'por', 'para', 'que', 'y', 'los', 'las', 'sobre', 'del',
+                  'xbox', 'game', 'pass', 'microsoft', 'gaming', 'games', 'nuevo', 'nueva', 'nuevos', 'nuevas',
+                  'juego', 'juegos', 'llega', 'llegan', 's', 'm', 'n', 'a', 'tu', 'te', 'al', 'se'}
     title_words = {w for w in title_words if w not in stop_words}
     
     # 1. Verificar contra archivos en el disco (por si history.json no está al día)
@@ -60,7 +62,7 @@ def is_duplicate(title, history):
             if not title_words: continue
             overlap = len(intersection) / len(title_words)
             
-            if overlap > 0.3: # Si el 50% de las palabras del título nuevo ya existen en uno viejo
+            if overlap > 0.6:
                 return True
     return False
 def main():
