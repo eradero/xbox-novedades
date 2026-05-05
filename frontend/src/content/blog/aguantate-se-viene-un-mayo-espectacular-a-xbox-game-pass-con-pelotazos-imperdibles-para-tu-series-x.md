@@ -2,7 +2,7 @@
 title: '¡Aguantate! Se Viene un Mayo ESPECTACULAR a Xbox Game Pass con Pelotazos Imperdibles para tu Series X'
 description: 'Preparate, porque los próximos títulos que aterrizan en Xbox Game Pass este mayo son una locura total. Desde las carreras más alucinantes hasta la exploración submarina más intrigante, ¡tu Series X no va a parar! Mirá todos los detalles.'
 pubDate: 'May 05 2026'
-heroImage: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=1024'
+heroImage: '/images/aguantate-se-viene-un-mayo-espectacular-a-xbox-game-pass-con-pelotazos-imperdibles-para-tu-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass&tag=blogseradero-20'
 ---
 
