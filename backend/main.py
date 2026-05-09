@@ -1,6 +1,8 @@
 import json
 import os
 import re
+import hashlib
+import random
 import urllib.parse
 import requests
 from datetime import datetime
@@ -13,6 +15,53 @@ from ai_writer import generate_blog_post
 
 HISTORY_FILE = "history.json"
 BLOG_POSTS_DIR = "../frontend/src/content/blog"
+IMAGES_DIR = "../frontend/public/images"
+
+FALLBACK_IMAGES = [
+    "https://images.unsplash.com/photo-1621259182978-f09e5e2ca84a?q=80&w=1024",  # Xbox Series X
+    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1024",    # Setup retro neon
+    "https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1024",    # Esports jóvenes
+    "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1024",    # Esports ROG headset
+    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1024", # Código/matrix pantalla
+    "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1024", # Gaming neon setup
+]
+
+def get_existing_hashes(images_dir):
+    hashes = set()
+    if not os.path.exists(images_dir):
+        return hashes
+    for fname in os.listdir(images_dir):
+        if fname.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')):
+            fpath = os.path.join(images_dir, fname)
+            try:
+                with open(fpath, 'rb') as f:
+                    hashes.add(hashlib.md5(f.read()).hexdigest())
+            except Exception:
+                pass
+    return hashes
+
+def is_valid_image_bytes(content):
+    if len(content) < 5000:
+        return False
+    return content[:2] == b'\xff\xd8' or content[:4] == b'\x89PNG'
+
+def download_unique_image(url, existing_hashes, headers):
+    try:
+        r = requests.get(url, timeout=30, headers=headers)
+        if r.status_code != 200:
+            return None, None
+        content = r.content
+        if not is_valid_image_bytes(content):
+            print(f"  Contenido no es imagen válida: {url[:80]}")
+            return None, None
+        h = hashlib.md5(content).hexdigest()
+        if h in existing_hashes:
+            print(f"  Imagen duplicada (hash {h[:8]}…), descartada: {url[:80]}")
+            return None, None
+        return content, h
+    except Exception as e:
+        print(f"  Error descargando {url[:80]}: {e}")
+        return None, None
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
@@ -101,49 +150,53 @@ def main():
         
         try:
             os.makedirs(os.path.dirname(full_image_path), exist_ok=True)
-            
-            # Capa 1: Imagen real de la noticia
-            final_image_url = real_image_url
-            
-            # Verificación de relevancia (Evitar logos de sitios, ads, etc)
-            if final_image_url:
-                from ai_writer import verify_image_relevance
-                if not verify_image_relevance(final_image_url, generated_data["title"], generated_data.get("description", "")):
-                    print(f"Imagen original rechazada por falta de relevancia: {final_image_url}")
-                    final_image_url = ""
-            
-            # Capa 2: Buscar en internet si la capa 1 falló
-            if not final_image_url:
-                from scraper import search_internet_image
-                # Intento 1: Título original
-                final_image_url = search_internet_image(article["title"])
-                
-                # Intento 2: Con términos de calidad si falló el 1
-                if not final_image_url:
-                    final_image_url = search_internet_image(article["title"], "official wallpaper high res")
-            
-            # Capa 2.5: Imagen Genérica de Calidad (No IA)
-            if not final_image_url:
-                print("No se encontró imagen específica. Usando imagen genérica oficial.")
-                import random; final_image_url = random.choice(["https://images.unsplash.com/photo-1621259182978-f09e5e2ca84a?q=80&w=1024"])
-                
-            # Capa 3: Generar con IA si las anteriores fallaron
-            if not final_image_url:
-                print(f"No se encontró imagen real. Generando imagen con IA para: {slug}")
-                image_prompt = urllib.parse.quote(generated_data["image_prompt"] + ", xbox style, high quality, 4k")
-                final_image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?model=flux&nologo=true&width=1024&height=576"
-            
-            print(f"Descargando imagen final: {final_image_url}")
-            # Headers to avoid blocks
             headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-            img_response = requests.get(final_image_url, timeout=30, headers=headers)
-            
-            if img_response.status_code == 200:
+            existing_hashes = get_existing_hashes(IMAGES_DIR)
+            img_bytes = None
+
+            # Capa 1: Imagen real de la noticia
+            if real_image_url:
+                from ai_writer import verify_image_relevance
+                if not verify_image_relevance(real_image_url, generated_data["title"], generated_data.get("description", "")):
+                    print(f"Imagen original rechazada por falta de relevancia: {real_image_url}")
+                else:
+                    img_bytes, img_hash = download_unique_image(real_image_url, existing_hashes, headers)
+                    if img_bytes:
+                        print(f"Imagen de noticia aceptada (hash {img_hash[:8]}…)")
+
+            # Capa 2: Buscar en internet si la capa 1 falló
+            if not img_bytes:
+                from scraper import search_internet_image
+                for search_query in [article["title"], article["title"] + " official wallpaper high res"]:
+                    internet_url = search_internet_image(search_query)
+                    if internet_url:
+                        img_bytes, img_hash = download_unique_image(internet_url, existing_hashes, headers)
+                        if img_bytes:
+                            print(f"Imagen de internet aceptada (hash {img_hash[:8]}…)")
+                            break
+
+            # Capa 2.5: Fallbacks genéricos — aleatorios, sin repetir
+            if not img_bytes:
+                print("No se encontró imagen específica. Probando fallbacks genéricos...")
+                for fallback_url in random.sample(FALLBACK_IMAGES, len(FALLBACK_IMAGES)):
+                    img_bytes, img_hash = download_unique_image(fallback_url, existing_hashes, headers)
+                    if img_bytes:
+                        print(f"Fallback aceptado: {fallback_url[:80]} (hash {img_hash[:8]}…)")
+                        break
+
+            # Capa 3: Generar con IA si todo falló
+            if not img_bytes:
+                print(f"Generando imagen con IA para: {slug}")
+                image_prompt = urllib.parse.quote(generated_data["image_prompt"] + ", xbox style, high quality, 4k")
+                ai_url = f"https://image.pollinations.ai/prompt/{image_prompt}?model=flux&nologo=true&width=1024&height=576"
+                img_bytes, img_hash = download_unique_image(ai_url, existing_hashes, headers)
+
+            if img_bytes:
                 with open(full_image_path, "wb") as f:
-                    f.write(img_response.content)
+                    f.write(img_bytes)
             else:
-                print(f"Fallo descarga. Usando placeholder.")
-                image_path = "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1024"
+                print("No se pudo obtener ninguna imagen válida y única. Saltando imagen.")
+                image_path = ""
         except Exception as e:
             print(f"Error gestionando imagen: {e}")
             image_path = ""
