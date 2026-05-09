@@ -2,7 +2,7 @@
 title: '¡Fable Deslumbra! Todas las Respuestas del Developer_Direct que estabas esperando para tu Xbox Series X'
 description: 'Nos metemos de lleno en lo que Playground Games nos mostró de Fable en el Developer_Direct. ¡Preparate para un viaje lleno de magia, humor y decisiones que van a moldear tu aventura en Albion, todo con el poder de tu Xbox Series X!'
 pubDate: 'May 09 2026'
-heroImage: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1024'
+heroImage: '/images/fable-deslumbra-todas-las-respuestas-del-developer-direct-que-estabas-esperando-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Fable&tag=blogseradero-20'
 ---
 
