@@ -3,16 +3,27 @@ import json
 import feedparser
 from bs4 import BeautifulSoup
 import requests
+from datetime import datetime, timedelta, timezone
 
 RSS_URL = "https://news.google.com/rss/search?q=xbox+news,+xbox+series+x+news,+xbox+series+s+news,+xbox+game+pass+news,+new+xbox+games,+microsoft+gaming+news&hl=es-419&gl=AR&ceid=AR:es-419"
 
+MAX_AGE_DAYS = 30
+
 def fetch_latest_news():
-    """Fetches the latest news from the RSS feed."""
+    """Fetches the latest news from the RSS feed, skipping articles older than MAX_AGE_DAYS."""
     print("Buscando noticias en Google News...")
     feed = feedparser.parse(RSS_URL)
-    
+    cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
+
     articles = []
-    for entry in feed.entries[:5]: # Get top 5 recent
+    for entry in feed.entries[:5]:
+        try:
+            pub = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+            if pub < cutoff:
+                print(f"Saltando noticia vieja ({pub.date()}): {entry.title[:60]}")
+                continue
+        except Exception:
+            pass
         articles.append({
             "title": entry.title,
             "link": entry.link,
