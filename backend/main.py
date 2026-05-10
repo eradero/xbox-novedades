@@ -2,7 +2,6 @@ import json
 import os
 import re
 import hashlib
-import random
 import urllib.parse
 import requests
 from datetime import datetime
@@ -17,14 +16,6 @@ HISTORY_FILE = "history.json"
 BLOG_POSTS_DIR = "../frontend/src/content/blog"
 IMAGES_DIR = "../frontend/public/images"
 
-FALLBACK_IMAGES = [
-    "https://images.unsplash.com/photo-1621259182978-f09e5e2ca84a?q=80&w=1024",  # Xbox Series X
-    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1024",    # Setup retro neon
-    "https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1024",    # Esports jóvenes
-    "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1024",    # Esports ROG headset
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1024", # Código/matrix pantalla
-    "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1024", # Gaming neon setup
-]
 
 def get_existing_hashes(images_dir):
     hashes = set()
@@ -164,25 +155,21 @@ def main():
                     if img_bytes:
                         print(f"Imagen de noticia aceptada (hash {img_hash[:8]}…)")
 
-            # Capa 2: Buscar en internet si la capa 1 falló
+            # Capa 2: Buscar en internet con queries específicos del juego/consola
             if not img_bytes:
                 from scraper import search_internet_image
-                for search_query in [article["title"], article["title"] + " official wallpaper high res"]:
+                specific_queries = [
+                    generated_data.get("image_prompt", article["title"]) + " official game screenshot",
+                    article["title"] + " official artwork",
+                    article["title"],
+                ]
+                for search_query in specific_queries:
                     internet_url = search_internet_image(search_query)
                     if internet_url:
                         img_bytes, img_hash = download_unique_image(internet_url, existing_hashes, headers)
                         if img_bytes:
                             print(f"Imagen de internet aceptada (hash {img_hash[:8]}…)")
                             break
-
-            # Capa 2.5: Fallbacks genéricos — aleatorios, sin repetir
-            if not img_bytes:
-                print("No se encontró imagen específica. Probando fallbacks genéricos...")
-                for fallback_url in random.sample(FALLBACK_IMAGES, len(FALLBACK_IMAGES)):
-                    img_bytes, img_hash = download_unique_image(fallback_url, existing_hashes, headers)
-                    if img_bytes:
-                        print(f"Fallback aceptado: {fallback_url[:80]} (hash {img_hash[:8]}…)")
-                        break
 
             # Capa 3: Generar con IA si todo falló
             if not img_bytes:
