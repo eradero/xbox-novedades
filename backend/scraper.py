@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, timezone
 
 RSS_URL = "https://news.google.com/rss/search?q=xbox+news,+xbox+series+x+news,+xbox+series+s+news,+xbox+game+pass+news,+new+xbox+games,+microsoft+gaming+news&hl=es-419&gl=AR&ceid=AR:es-419"
 
-MAX_AGE_DAYS = 30
+MAX_AGE_DAYS = 7
 
 def fetch_latest_news():
     """Fetches the latest news from the RSS feed, skipping articles older than MAX_AGE_DAYS."""
