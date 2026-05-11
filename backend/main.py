@@ -214,7 +214,7 @@ affiliateLink: '{generated_data["affiliateLink"]}'
         # 4. Actualizar historial
         history.append({"link": article["link"], "title": article["title"]})
         save_history(history)
-        
+        break  # 1 nota por día
 
     print("Proceso finalizado.")
 
