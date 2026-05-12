@@ -144,10 +144,11 @@ def main():
             headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
             existing_hashes = get_existing_hashes(IMAGES_DIR)
             img_bytes = None
+            from ai_writer import verify_image_relevance
+            from scraper import search_internet_image
 
             # Capa 1: Imagen real de la noticia
             if real_image_url:
-                from ai_writer import verify_image_relevance
                 if not verify_image_relevance(real_image_url, generated_data["title"], generated_data.get("description", "")):
                     print(f"Imagen original rechazada por falta de relevancia: {real_image_url}")
                 else:
@@ -157,7 +158,6 @@ def main():
 
             # Capa 2: Buscar en internet con queries específicos del juego/consola
             if not img_bytes:
-                from scraper import search_internet_image
                 specific_queries = [
                     generated_data.get("image_prompt", article["title"]) + " official game screenshot",
                     article["title"] + " official artwork",
