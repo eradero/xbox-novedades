@@ -174,13 +174,6 @@ def main():
                             print(f"Imagen de internet aceptada (hash {img_hash[:8]}…)")
                             break
 
-            # Capa 3: Generar con IA si todo falló
-            if not img_bytes:
-                print(f"Generando imagen con IA para: {slug}")
-                image_prompt = urllib.parse.quote(generated_data["image_prompt"] + ", xbox style, high quality, 4k")
-                ai_url = f"https://image.pollinations.ai/prompt/{image_prompt}?model=flux&nologo=true&width=1024&height=576"
-                img_bytes, img_hash = download_unique_image(ai_url, existing_hashes, headers)
-
             if img_bytes:
                 with open(full_image_path, "wb") as f:
                     f.write(img_bytes)
