@@ -73,26 +73,25 @@ def is_valid_image(url):
     return not any(word in url_lower for word in bad_words)
 
 def search_internet_image(query, extra_term=""):
-    """Searches for an image on the internet (Bing) as a fallback."""
+    """Searches for an image on DuckDuckGo."""
     try:
-        search_query = f"{query} gameplay screenshot official art".strip()
+        import re
+        search_query = f"{query} official art".strip()
         print(f"Buscando imagen en internet para: {search_query}")
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
-        url = f"https://www.bing.com/images/search?q={urllib.parse.quote(search_query)}"
-        response = requests.get(url, headers=headers, timeout=10)
-        soup = BeautifulSoup(response.text, "html.parser")
-        
-        # Bing images are in <a> tags with class "iusc"
-        import json
-        for a in soup.find_all("a", class_="iusc"):
-            m = a.get("m")
-            if m:
-                data = json.loads(m)
-                img_url = data.get("murl")
-                if img_url and img_url.startswith("http") and is_valid_image(img_url):
-                    import re
-                    clean_url = re.sub(r'^https?://', '', img_url)
-                    return f"https://wsrv.nl/?url={clean_url}"
+        headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"}
+
+        r = requests.get(f"https://duckduckgo.com/?q={urllib.parse.quote(search_query)}", headers=headers, timeout=10)
+        vqd_match = re.search(r'vqd=([\d-]+)', r.text)
+        if not vqd_match:
+            return ""
+        vqd = vqd_match.group(1)
+
+        img_api = f"https://duckduckgo.com/i.js?l=us-en&o=json&q={urllib.parse.quote(search_query)}&vqd={vqd}&f=,,,,,&p=1"
+        r2 = requests.get(img_api, headers=headers, timeout=10)
+        for result in r2.json().get("results", []):
+            img_url = result.get("image", "")
+            if img_url and img_url.startswith("http") and is_valid_image(img_url):
+                return img_url
         return ""
     except Exception as e:
         print(f"Error buscando imagen en internet: {e}")
