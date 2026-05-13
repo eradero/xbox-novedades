@@ -105,8 +105,27 @@ def is_duplicate(title, history):
             if overlap > 0.6:
                 return True
     return False
+def already_published_today():
+    today = datetime.now().strftime("%b %d %Y")
+    if not os.path.exists(BLOG_POSTS_DIR):
+        return False
+    for fname in os.listdir(BLOG_POSTS_DIR):
+        if not fname.endswith(".md"):
+            continue
+        try:
+            with open(os.path.join(BLOG_POSTS_DIR, fname), 'r', encoding='utf-8') as f:
+                head = f.read(500)
+            if f"pubDate: '{today}'" in head:
+                return True
+        except Exception:
+            pass
+    return False
+
 def main():
     print("Iniciando proceso automático de blog...")
+    if already_published_today():
+        print(f"Ya se publicó una nota hoy ({datetime.now().strftime('%b %d %Y')}). Saliendo.")
+        return
     history = load_history()
     
     articles = fetch_latest_news()
