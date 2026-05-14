@@ -2,7 +2,7 @@
 title: '¡La dupla invencible! Xbox Game Pass y Discord refuerzan su alianza para llevarte MÁS beneficios'
 description: 'Descubrí cómo la sociedad entre Xbox Game Pass y Discord sigue creciendo para brindarte una experiencia de juego aún más conectada y llena de ventajas, ¡especialmente si sos usuario de Ultimate!'
 pubDate: 'May 14 2026'
-heroImage: ''
+heroImage: '/images/la-dupla-invencible-xbox-game-pass-y-discord-refuerzan-su-alianza-para-llevarte-m-s-beneficios.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+games+and+console&tag=blogseradero-20'
 ---
 
