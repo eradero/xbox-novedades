@@ -2,7 +2,7 @@
 title: '¡No Te lo Podés Perder! Game Pass y Xbox Series X al Mejor Precio con Descuentos Irresistibles'
 description: 'Microsoft bajó los precios de Game Pass y ahora, sumado a las ofertas de Newegg, tenés la chance de potenciar tu Xbox Series X como nunca. ¡Aprovechá!'
 pubDate: 'May 15 2026'
-heroImage: ''
+heroImage: '/images/mayo-2026-desembarca-con-juegazos-estelares-en-tu-xbox-game-pass.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass&tag=blogseradero-20'
 ---
 
