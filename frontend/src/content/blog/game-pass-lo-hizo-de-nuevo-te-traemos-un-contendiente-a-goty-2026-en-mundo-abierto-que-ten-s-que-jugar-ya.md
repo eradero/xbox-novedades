@@ -2,7 +2,7 @@
 title: '¡Game Pass lo hizo de nuevo! Te traemos un contendiente a GOTY 2026 en mundo abierto que tenés que jugar YA'
 description: 'Preparate para sumergirte en una aventura épica. Xbox Game Pass acaba de sumar a su catálogo un juegazo de mundo abierto que ya está haciendo ruido como un serio candidato a Juego del Año en 2026. ¡Descubrí todo acá!'
 pubDate: 'May 16 2026'
-heroImage: ''
+heroImage: '/images/game-pass-lo-hizo-de-nuevo-te-traemos-un-contendiente-a-goty-2026-en-mundo-abierto-que-ten-s-que-jugar-ya.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+juego+mundo+abierto&tag=blogseradero-20'
 ---
 
