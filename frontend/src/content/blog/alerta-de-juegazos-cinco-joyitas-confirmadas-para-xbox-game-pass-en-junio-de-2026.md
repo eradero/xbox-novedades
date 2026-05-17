@@ -2,7 +2,7 @@
 title: '¡Alerta de Juegazos! Cinco joyitas confirmadas para Xbox Game Pass en junio de 2026'
 description: 'Preparate para un junio de locos: te contamos todo sobre los cinco nuevos títulos que se suman a Xbox Game Pass en 2026, ¡y que no podés perderte en tu Xbox Series X!'
 pubDate: 'May 17 2026'
-heroImage: ''
+heroImage: '/images/alerta-de-juegazos-cinco-joyitas-confirmadas-para-xbox-game-pass-en-junio-de-2026.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Aventura+C%C3%B3smica&tag=blogseradero-20'
 ---
 
