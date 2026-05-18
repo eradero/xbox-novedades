@@ -2,7 +2,7 @@
 title: '¡Explota tu Xbox Series X! Game Pass Recibe TRES Bombazos Day One, ¡incluyendo un Futuro Número Uno!'
 description: '¡Fanáticos de Xbox, prepárense! Xbox Game Pass acaba de anunciar la llegada de tres juegazos directo desde su lanzamiento, uno de ellos con pinta de ser un éxito arrollador. ¡Mirá lo que te espera!'
 pubDate: 'May 18 2026'
-heroImage: ''
+heroImage: '/images/explota-tu-xbox-series-x-game-pass-recibe-tres-bombazos-day-one-incluyendo-un-futuro-n-mero-uno.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Aventura+Epica+El+Ultimo+Centinela&tag=blogseradero-20'
 ---
 
