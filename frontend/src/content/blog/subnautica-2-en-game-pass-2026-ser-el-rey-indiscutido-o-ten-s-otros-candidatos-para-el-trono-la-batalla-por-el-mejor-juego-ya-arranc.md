@@ -8,7 +8,7 @@ description: '**
 
 **'
 pubDate: 'May 19 2026'
-heroImage: ''
+heroImage: '/images/subnautica-2-en-game-pass-2026-ser-el-rey-indiscutido-o-ten-s-otros-candidatos-para-el-trono-la-batalla-por-el-mejor-juego-ya-arranc.jpg'
 affiliateLink: '**
 https://www.amazon.com/s?k=Xbox+Series+X+Subnautica+2&tag=blogseradero-20
 
@@ -21,7 +21,7 @@ https://www.amazon.com/s?k=Xbox+Series+X+Subnautica+2&tag=blogseradero-20
 
 Mirá, una fuente importante en el mundo Xbox, *TrueAchievements*, tiró la data y nos dejó pensando: *Subnautica 2* tiene todo para ser el juego más grande de Xbox Game Pass en 2026. Y no es para menos, ¿eh? La saga *Subnautica* ya nos demostró que sabe cómo sumergirnos (literalmente) en mundos alienígenas fascinantes, llenos de misterios, peligros y una belleza submarina que te deja boquiabierto. Imaginate eso potenciado al máximo en tu Xbox Series X, ¡una locura!
 
-### Subnautica 2: ¿El próximo gran "sí o sí" de tu Game Pass?
+### Subnautica 2: ¿El próximo gran “sí o sí” de tu Game Pass?
 
 Si alguna vez jugaste un *Subnautica*, sabés de qué hablamos. Es una mezcla única de supervivencia, exploración y narrativa ambiental que te atrapa desde el primer minuto. Tenés que gestionar recursos, construir tu base, investigar criaturas desconocidas y, lo más importante, ¡sobrevivir! Con *Subnautica 2* esperamos una experiencia todavía más pulida, con gráficos que aprovechen al máximo la potencia de la Series X y nuevas historias que nos hagan vibrar.
 
@@ -35,8 +35,8 @@ Pensá en lo que se viene de parte de *Xbox Game Studios* y *Bethesda*: quizás 
 
 ### Tu Xbox Series X lista para la acción
 
-No importa qué juego se lleve el título de "el más grande", lo importante es que tu Xbox Series X va a ser la nave perfecta para disfrutarlo. La potencia de la consola garantiza que vas a ver esos mundos submarinos con una claridad asombrosa, tiempos de carga mínimos y una fluidez que te sumerge por completo en la acción. Si todavía no tenés la tuya, o estás pensando en actualizarte, ¡este es el momento!
+No importa qué juego se lleve el título de “el más grande”, lo importante es que tu Xbox Series X va a ser la nave perfecta para disfrutarlo. La potencia de la consola garantiza que vas a ver esos mundos submarinos con una claridad asombrosa, tiempos de carga mínimos y una fluidez que te sumerge por completo en la acción. Si todavía no tenés la tuya, o estás pensando en actualizarte, ¡este es el momento!
 
 Así que, mientras esperamos más novedades de *Subnautica 2* y de todo lo que Xbox nos tiene preparado para 2026, la emoción ya se siente. ¡Va a ser un año imperdible para los gamers de Xbox!
 
-Contanos, ¿vos qué pensás? ¿*Subnautica 2* tiene lo necesario para ser el rey absoluto de Game Pass en 2026, o tenés otros candidatos en mente? ¡Dejanos tu comentario acá abajo y debatamos! ¡Nos vemos en el próximo post!
+Contanos, ¿vos qué pensás? ¿*Subnautica 2* tiene lo necesario para ser el rey absoluto de Game Pass en 2026, o tenés otros candidatos en mente? ¡Dejános tu comentario acá abajo y debatamos! ¡Nos vemos en el próximo post!
