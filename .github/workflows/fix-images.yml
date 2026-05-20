@@ -1,0 +1,38 @@
+name: Fix Blog Images
+
+on:
+  schedule:
+    - cron: '15 13 * * *'  # 13:15 UTC = 10:15 Argentina (2h después del cron de 11:15 UTC)
+    - cron: '15 1 * * *'   # 1:15 UTC = 22:15 Argentina (2h después del cron de 23:15 UTC)
+  workflow_dispatch:
+
+jobs:
+  fix-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Instalar dependencias
+      run: pip install requests
+
+    - name: Fix hero image del post de hoy
+      env:
+        SEARCH_SUFFIX: "Xbox Game Pass official"
+        BRAND_QUERY: "Xbox Game Pass 2026 official art"
+      run: python backend/fix_images_ci.py
+
+    - name: Commit y Push si hay cambios
+      run: |
+        git config user.name "Image Fix Bot"
+        git config user.email "action@github.com"
+        git add frontend/public/images/ frontend/src/content/blog/
+        git diff --staged --quiet || (git commit -m "fix: imagen del post del día [automated]" && git pull --rebase && git push)
