@@ -2,7 +2,7 @@
 title: '¡Game Pass se PONE LAS PILAS! Se vienen Forza Horizon 6, Jurassic World Evolution 3 y un montón de joyitas más para tu Xbox'
 description: '¡La alegría es total para los gamers de Xbox! Game Pass se renueva con títulos gigantes como Forza Horizon 6 y Jurassic World Evolution 3, prometiendo horas y horas de pura diversión. ¡Mirá todo lo que tenés a punto de llegar a tu consola!'
 pubDate: 'May 20 2026'
-heroImage: ''
+heroImage: '/images/game-pass-se-pone-las-pilas-se-vienen-forza-horizon-6-jurassic-world-evolution-3-y-un-mont-n-de-joyitas-m-s-para-tu-xbox.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+consola&tag=blogseradero-20'
 ---
 
