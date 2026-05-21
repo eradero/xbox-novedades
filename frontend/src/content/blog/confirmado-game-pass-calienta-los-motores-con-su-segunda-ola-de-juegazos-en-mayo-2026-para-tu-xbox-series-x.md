@@ -2,7 +2,7 @@
 title: '¡Confirmado! Game Pass Calienta los Motores con su Segunda Ola de Juegazos en Mayo 2026 para tu Xbox Series X'
 description: 'Microsoft acaba de destapar la segunda tanda de títulos que van a aterrizar en Xbox Game Pass durante mayo de 2026. ¡Preparate para viciar con estas novedades espectaculares en tu Xbox Series X!'
 pubDate: 'May 21 2026'
-heroImage: ''
+heroImage: '/images/confirmado-game-pass-calienta-los-motores-con-su-segunda-ola-de-juegazos-en-mayo-2026-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Game+Pass+Ultimate+subscription+Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
