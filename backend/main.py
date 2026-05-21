@@ -166,14 +166,11 @@ def main():
             from ai_writer import verify_image_relevance
             from scraper import search_internet_image
 
-            # Capa 1: Imagen real de la noticia
+            # Capa 1: Imagen real de la noticia (sin verify_image_relevance — la imagen del artículo es confiable)
             if real_image_url:
-                if not verify_image_relevance(real_image_url, generated_data["title"], generated_data.get("description", "")):
-                    print(f"Imagen original rechazada por falta de relevancia: {real_image_url}")
-                else:
-                    img_bytes, img_hash = download_unique_image(real_image_url, existing_hashes, headers)
-                    if img_bytes:
-                        print(f"Imagen de noticia aceptada (hash {img_hash[:8]}…)")
+                img_bytes, img_hash = download_unique_image(real_image_url, existing_hashes, headers)
+                if img_bytes:
+                    print(f"Imagen de noticia aceptada (hash {img_hash[:8]}…)")
 
             # Capa 2: Buscar en internet con queries específicos del juego/consola
             if not img_bytes:
@@ -185,9 +182,6 @@ def main():
                 for search_query in specific_queries:
                     internet_url = search_internet_image(search_query)
                     if internet_url:
-                        if not verify_image_relevance(internet_url, generated_data["title"], generated_data.get("description", "")):
-                            print(f"  Imagen de internet rechazada por relevancia: {internet_url[:80]}")
-                            continue
                         img_bytes, img_hash = download_unique_image(internet_url, existing_hashes, headers)
                         if img_bytes:
                             print(f"Imagen de internet aceptada (hash {img_hash[:8]}…)")

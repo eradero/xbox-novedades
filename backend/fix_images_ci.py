@@ -110,7 +110,23 @@ def is_url_ok(url):
     return not any(w in url.lower() for w in BAD_WORDS)
 
 
+def bing_search(query):
+    """Search Bing Images — works from cloud IPs (Azure). Primary search."""
+    try:
+        r = requests.get(
+            f"https://www.bing.com/images/search?q={urllib.parse.quote(query)}&form=HDRSC2&first=1",
+            headers=HEADERS_WEB, timeout=15
+        )
+        # Bing embeds direct image URLs in murl fields within the page HTML
+        urls = re.findall(r'"murl":"(https?://[^"]+)"', r.text)
+        return [u for u in urls[:10] if not any(bad in u.lower() for bad in BAD_WORDS)]
+    except Exception as e:
+        print(f"  Bing error: {e}")
+        return []
+
+
 def ddg_search(query):
+    """Search DuckDuckGo Images — fallback (sometimes blocked from cloud IPs)."""
     try:
         r = requests.get(
             f"https://duckduckgo.com/?q={urllib.parse.quote(query)}",
@@ -118,7 +134,6 @@ def ddg_search(query):
         )
         m = re.search(r"vqd=([\d-]+)", r.text)
         if not m:
-            print("  DDG: no vqd token")
             return []
         vqd = m.group(1)
         r2 = requests.get(
@@ -166,13 +181,21 @@ def find_and_download_image(title, existing_hashes):
     if BRAND_QUERY:
         queries.append(BRAND_QUERY)
     for query in queries:
-        print(f"  Buscando: {query[:80]}")
+        print(f"  Buscando (Bing): {query[:75]}")
+        for url in bing_search(query):
+            if not is_url_ok(url):
+                continue
+            content = download_image(url, existing_hashes)
+            if content:
+                print(f"  Imagen encontrada (Bing): {url[:80]}")
+                return content
+        # Fallback a DDG si Bing no dio resultados
         for url in ddg_search(query):
             if not is_url_ok(url):
                 continue
             content = download_image(url, existing_hashes)
             if content:
-                print(f"  Imagen encontrada: {url[:80]}")
+                print(f"  Imagen encontrada (DDG): {url[:80]}")
                 return content
     return None
 
