@@ -2,7 +2,7 @@
 title: '¡Atención, Gamers! Game Pass Revienta el Resto de Mayo con Títulos que NO te Podés Perder'
 description: '¡La manija es total! Descubrí los juegazos que se suman a Xbox Game Pass para cerrar mayo, con lanzamientos esperadísimos y joyitas que vas a querer jugar YA. ¡Preparate para viciar!'
 pubDate: 'May 22 2026'
-heroImage: ''
+heroImage: '/images/atenci-n-gamers-game-pass-revienta-el-resto-de-mayo-con-t-tulos-que-no-te-pod-s-perder.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Senua%27s+Saga+Hellblade+II+Xbox+Series+X&tag=blogseradero-20'
 ---
 
