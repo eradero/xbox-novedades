@@ -191,11 +191,15 @@ def main():
                 with open(full_image_path, "wb") as f:
                     f.write(img_bytes)
             else:
-                print("No se pudo obtener ninguna imagen válida y única. Saltando imagen.")
-                image_path = ""
+                if real_image_url and real_image_url.startswith('http'):
+                    print(f"No se descargó imagen. Guardando URL externa como fallback para el fix script.")
+                    image_path = real_image_url
+                else:
+                    print("No se pudo obtener ninguna imagen. Post sin imagen.")
+                    image_path = ""
         except Exception as e:
             print(f"Error gestionando imagen: {e}")
-            image_path = ""
+            image_path = real_image_url if (real_image_url and real_image_url.startswith('http')) else ""
             
         # 4. Guardar en el frontend (Astro format)
         today = datetime.now().strftime("%b %d %Y")

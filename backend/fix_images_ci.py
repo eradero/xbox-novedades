@@ -230,12 +230,14 @@ def main():
     print(f"heroImage: '{hero}'")
 
     needs_fix = False
+    external_url = None
     if not hero:
         print("heroImage vacío → necesita imagen")
         needs_fix = True
     elif not hero.startswith("/images/"):
-        print("heroImage es URL externa → necesita imagen local")
+        print(f"heroImage es URL externa → descarga directa + localizar")
         needs_fix = True
+        external_url = hero  # intentar descarga directa sin buscadores
     else:
         local_path = os.path.join(IMAGES_DIR, os.path.basename(hero))
         if not os.path.exists(local_path):
@@ -257,12 +259,22 @@ def main():
     title = get_post_title(fpath)
     print(f"Título: {title[:80]}")
     existing_hashes = get_existing_hashes()
+    img_bytes = None
 
-    if is_speculative_post(fpath) and BRAND_QUERY:
-        print("Post especulativo → usando imagen de marca")
-        img_bytes = find_and_download_image(BRAND_QUERY, existing_hashes)
-    else:
-        img_bytes = find_and_download_image(title, existing_hashes)
+    # Primero: descarga directa desde la URL externa del artículo (no necesita buscadores)
+    if external_url:
+        print(f"  Descarga directa: {external_url[:80]}")
+        img_bytes = download_image(external_url, existing_hashes)
+        if img_bytes:
+            print("  Descarga directa OK")
+
+    # Fallback: buscar en Bing/DDG (puede fallar desde IPs cloud)
+    if not img_bytes:
+        if is_speculative_post(fpath) and BRAND_QUERY:
+            print("Post especulativo → usando imagen de marca")
+            img_bytes = find_and_download_image(BRAND_QUERY, existing_hashes)
+        else:
+            img_bytes = find_and_download_image(title, existing_hashes)
 
     if not img_bytes:
         print("No se encontró imagen válida. Post queda sin imagen.")
