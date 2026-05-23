@@ -2,7 +2,7 @@
 title: '¡Tremendo! Mayo 2026 explota en Game Pass: ¡Mirá los juegazos que llegan a tu Xbox!'
 description: 'Preparate para un mayo inolvidable con Game Pass. Luna Abyss, Remnant 2, Jurassic World Evolution 3 y otros juegazos te esperan para que los disfrutes en tu Xbox Series X.'
 pubDate: 'May 23 2026'
-heroImage: ''
+heroImage: '/images/tremendo-mayo-2026-explota-en-game-pass-mir-los-juegazos-que-llegan-a-tu-xbox.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass+Luna+Abyss+Remnant+2+Jurassic+World+Evolution+3&tag=blogseradero-20'
 ---
 
