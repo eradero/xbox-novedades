@@ -33,6 +33,12 @@ jobs:
         cd backend
         python main.py
 
+    - name: Fix hero image si falta
+      env:
+        SEARCH_SUFFIX: "Xbox Game Pass official"
+        BRAND_QUERY: "Xbox Game Pass 2026 official art"
+      run: python backend/fix_images_ci.py
+
     - name: Hacer Commit y Push de los nuevos artículos
       run: |
         git config --global user.name 'GitHub Action Bot'
