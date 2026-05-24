@@ -2,7 +2,7 @@
 title: '¡Aceleralo! Forza Horizon 6 Temporada 1 ya está acá y llega derrapando a tu Xbox Game Pass'
 description: 'Preparate para una nueva aventura. La primera temporada de Forza Horizon 6 acaba de aterrizar en tu Xbox Series X vía Game Pass. Descubrí todas las novedades que tenés para disfrutar: autos increíbles, desafíos épicos y muchísimo más. ¡Ponete el cinturón y salí a la ruta!'
 pubDate: 'May 24 2026'
-heroImage: ''
+heroImage: '/images/aceleralo-forza-horizon-6-temporada-1-ya-est-ac-y-llega-derrapando-a-tu-xbox-game-pass.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Forza+Horizon+6+Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
