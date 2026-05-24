@@ -5,8 +5,9 @@ Finds today's post, downloads a missing/invalid image, updates frontmatter.
 Commit/push is handled by the calling workflow.
 
 Env vars:
-  SEARCH_SUFFIX — appended to post title for image search (e.g. "PS5 official art")
-  BRAND_QUERY   — fallback search for speculative posts
+  PEXELS_API_KEY — free API key from pexels.com/api (works from Azure/cloud IPs)
+  SEARCH_SUFFIX  — appended to post title for image search (e.g. "PS5 official art")
+  BRAND_QUERY    — fallback search for speculative posts
 """
 
 import hashlib
@@ -27,6 +28,7 @@ except ImportError:
 BLOG_DIR = "frontend/src/content/blog"
 IMAGES_DIR = "frontend/public/images"
 
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 SEARCH_SUFFIX = os.environ.get("SEARCH_SUFFIX", "official art")
 BRAND_QUERY = os.environ.get("BRAND_QUERY", "")
 
@@ -110,14 +112,40 @@ def is_url_ok(url):
     return not any(w in url.lower() for w in BAD_WORDS)
 
 
+def pexels_search(query):
+    """Search Pexels — reliable from any IP including Azure. Free: 25k requests/month."""
+    if not PEXELS_API_KEY:
+        return []
+    try:
+        r = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": PEXELS_API_KEY},
+            params={"query": query, "per_page": 10, "orientation": "landscape"},
+            timeout=15,
+        )
+        if r.status_code != 200:
+            print(f"  Pexels error: HTTP {r.status_code}")
+            return []
+        photos = r.json().get("photos", [])
+        urls = []
+        for p in photos:
+            src = p.get("src", {})
+            url = src.get("large2x") or src.get("large") or src.get("original")
+            if url and is_url_ok(url):
+                urls.append(url)
+        return urls
+    except Exception as e:
+        print(f"  Pexels error: {e}")
+        return []
+
+
 def bing_search(query):
-    """Search Bing Images — works from cloud IPs (Azure). Primary search."""
+    """Search Bing Images — sometimes works from Azure, sometimes blocked."""
     try:
         r = requests.get(
             f"https://www.bing.com/images/search?q={urllib.parse.quote(query)}&form=HDRSC2&first=1",
             headers=HEADERS_WEB, timeout=15
         )
-        # Bing embeds direct image URLs in murl fields within the page HTML
         urls = re.findall(r'"murl":"(https?://[^"]+)"', r.text)
         return [u for u in urls[:10] if not any(bad in u.lower() for bad in BAD_WORDS)]
     except Exception as e:
@@ -126,7 +154,7 @@ def bing_search(query):
 
 
 def ddg_search(query):
-    """Search DuckDuckGo Images — fallback (sometimes blocked from cloud IPs)."""
+    """Search DuckDuckGo Images — fallback (often blocked from cloud IPs)."""
     try:
         r = requests.get(
             f"https://duckduckgo.com/?q={urllib.parse.quote(query)}",
@@ -172,15 +200,26 @@ def download_image(url, existing_hashes):
         return None
 
 
-def find_and_download_image(title, existing_hashes):
+def find_and_download_image(search_title, existing_hashes):
     queries = [
-        f"{title} {SEARCH_SUFFIX}",
-        f"{title} official screenshot",
-        title,
+        f"{search_title} {SEARCH_SUFFIX}",
+        f"{search_title} official screenshot",
+        search_title,
     ]
     if BRAND_QUERY:
         queries.append(BRAND_QUERY)
+
     for query in queries:
+        # Pexels primero — siempre funciona desde Azure
+        if PEXELS_API_KEY:
+            print(f"  Buscando (Pexels): {query[:75]}")
+            for url in pexels_search(query):
+                content = download_image(url, existing_hashes)
+                if content:
+                    print(f"  Imagen encontrada (Pexels): {url[:80]}")
+                    return content
+
+        # Bing como secundario
         print(f"  Buscando (Bing): {query[:75]}")
         for url in bing_search(query):
             if not is_url_ok(url):
@@ -189,7 +228,8 @@ def find_and_download_image(title, existing_hashes):
             if content:
                 print(f"  Imagen encontrada (Bing): {url[:80]}")
                 return content
-        # Fallback a DDG si Bing no dio resultados
+
+        # DDG como terciario
         for url in ddg_search(query):
             if not is_url_ok(url):
                 continue
@@ -197,6 +237,7 @@ def find_and_download_image(title, existing_hashes):
             if content:
                 print(f"  Imagen encontrada (DDG): {url[:80]}")
                 return content
+
     return None
 
 
@@ -218,6 +259,10 @@ def is_speculative_post(fpath):
 
 def main():
     print(f"Fix Images CI — {TODAY} UTC")
+    if PEXELS_API_KEY:
+        print("Pexels API: configurada ✓")
+    else:
+        print("Pexels API: NO configurada — solo Bing/DDG (pueden fallar desde Azure)")
 
     fpath, fname = find_today_post()
     if not fpath:
@@ -235,9 +280,9 @@ def main():
         print("heroImage vacío → necesita imagen")
         needs_fix = True
     elif not hero.startswith("/images/"):
-        print(f"heroImage es URL externa → descarga directa + localizar")
+        print(f"heroImage es URL externa → descarga directa")
         needs_fix = True
-        external_url = hero  # intentar descarga directa sin buscadores
+        external_url = hero
     else:
         local_path = os.path.join(IMAGES_DIR, os.path.basename(hero))
         if not os.path.exists(local_path):
@@ -261,17 +306,17 @@ def main():
     existing_hashes = get_existing_hashes()
     img_bytes = None
 
-    # Primero: descarga directa desde la URL externa del artículo (no necesita buscadores)
+    # Primero: descarga directa desde URL externa (no necesita buscadores)
     if external_url:
         print(f"  Descarga directa: {external_url[:80]}")
         img_bytes = download_image(external_url, existing_hashes)
         if img_bytes:
             print("  Descarga directa OK")
 
-    # Fallback: buscar en Bing/DDG (puede fallar desde IPs cloud)
+    # Fallback: Pexels → Bing → DDG
     if not img_bytes:
         if is_speculative_post(fpath) and BRAND_QUERY:
-            print("Post especulativo → usando imagen de marca")
+            print("Post especulativo → usando query de marca")
             img_bytes = find_and_download_image(BRAND_QUERY, existing_hashes)
         else:
             img_bytes = find_and_download_image(title, existing_hashes)

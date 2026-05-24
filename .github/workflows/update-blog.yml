@@ -35,6 +35,7 @@ jobs:
 
     - name: Fix hero image si falta
       env:
+        PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         SEARCH_SUFFIX: "Xbox Game Pass official"
         BRAND_QUERY: "Xbox Game Pass 2026 official art"
       run: python backend/fix_images_ci.py
