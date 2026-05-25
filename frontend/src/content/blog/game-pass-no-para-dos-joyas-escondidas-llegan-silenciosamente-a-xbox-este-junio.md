@@ -2,7 +2,7 @@
 title: '¡Game Pass no para! Dos Joyas Escondidas Llegan Silenciosamente a Xbox Este Junio'
 description: 'Preparate para sumar más horas de vicio: Xbox Game Pass sorprende de nuevo con la incorporación silenciosa de dos juegazos que te van a volar la cabeza este junio. ¡No te los pierdas!'
 pubDate: 'May 25 2026'
-heroImage: ''
+heroImage: '/images/game-pass-no-para-dos-joyas-escondidas-llegan-silenciosamente-a-xbox-este-junio.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Spiritfarer+Mortal+Shell+Xbox+Series+X&tag=blogseradero-20'
 ---
 
