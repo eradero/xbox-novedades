@@ -2,7 +2,7 @@
 title: '¡Bond ha Vuelto con Todo! 5 Razones por las que Amamos 007 First Light en tu Xbox Series X'
 description: 'Descubrí por qué 007 First Light es el juego que tenés que tener en tu Xbox Series X. Te contamos los cinco puntos clave que nos están volviendo locos de la nueva aventura de James Bond, optimizada para la consola de Microsoft.'
 pubDate: 'May 27 2026'
-heroImage: ''
+heroImage: '/images/bond-ha-vuelto-con-todo-5-razones-por-las-que-amamos-007-first-light-en-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=007+First+Light+Xbox+Series+X&tag=blogseradero-20'
 ---
 
