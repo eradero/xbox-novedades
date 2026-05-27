@@ -2,7 +2,7 @@
 title: '¡Game Pass Explota con Más de 30 Juegazos Nuevos para tu Xbox Series X!'
 description: 'Preparate para una avalancha de diversión: Microsoft acaba de anunciar que el catálogo de Xbox Game Pass se expande con más de treinta títulos frescos, garantizando horas y horas de vicio en tu Xbox Series X.'
 pubDate: 'May 26 2026'
-heroImage: ''
+heroImage: '/images/game-pass-explota-con-m-s-de-30-juegazos-nuevos-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass+games&tag=blogseradero-20'
 ---
 
