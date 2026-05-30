@@ -2,7 +2,7 @@
 title: '¡Noticia BOMBA! El recorte de precio del Xbox Game Pass la está rompiendo y Xbox ya piensa en el futuro'
 description: 'Una alegría para todos los gamers: los reportes indican que el recorte de precio del Xbox Game Pass está funcionando de maravillas. La estrategia de Xbox está dando sus frutos, pero la compañía ya mira más allá, entendiendo que el éxito se construye con paciencia y visión a largo plazo. ¡Mirá los detalles!'
 pubDate: 'May 30 2026'
-heroImage: ''
+heroImage: '/images/noticia-bomba-el-recorte-de-precio-del-xbox-game-pass-la-est-rompiendo-y-xbox-ya-piensa-en-el-futuro.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass&tag=blogseradero-20'
 ---
 
