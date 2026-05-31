@@ -2,7 +2,7 @@
 title: '¡Game Pass la rompe! El CEO de Xbox Confirma que los Recortes de Precios Son un Éxito Rotundo'
 description: 'Phil Spencer, el mandamás de Xbox, dio una gran noticia: los recientes ajustes de precios en Game Pass están rindiendo sus frutos, ¡y esto es solo el principio para los gamers que aman su Xbox Series X!'
 pubDate: 'May 31 2026'
-heroImage: ''
+heroImage: '/images/game-pass-la-rompe-el-ceo-de-xbox-confirma-que-los-recortes-de-precios-son-un-xito-rotundo.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+Game+Pass+subscription&tag=blogseradero-20'
 ---
 
