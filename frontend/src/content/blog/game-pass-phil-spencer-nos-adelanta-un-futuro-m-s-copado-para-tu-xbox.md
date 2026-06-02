@@ -2,7 +2,7 @@
 title: 'Game Pass: ¡Phil Spencer Nos Adelanta Un Futuro Más Copado Para Tu Xbox!'
 description: 'Phil Spencer, el capo de Xbox, compartió sus pensamientos sobre los recientes recortes de precios en Game Pass. Entrá y descubrí qué significa esto para tu suscripción y todo lo que se viene para la comunidad Xbox.'
 pubDate: 'Jun 01 2026'
-heroImage: ''
+heroImage: '/images/game-pass-phil-spencer-nos-adelanta-un-futuro-m-s-copado-para-tu-xbox.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X&tag=blogseradero-20'
 ---
 
