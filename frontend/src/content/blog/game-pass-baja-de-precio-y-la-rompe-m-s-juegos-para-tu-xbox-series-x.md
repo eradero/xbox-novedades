@@ -2,7 +2,7 @@
 title: '¡Game Pass Baja de Precio y la Rompe! ¡Más Juegos Para Tu Xbox Series X!'
 description: '¡Atención, gamers! Game Pass confirmó una baja de precio de $7 USD que ya está dando sus frutos: más suscriptores y menos bajas. ¡Preparate para aprovechar al máximo tu Xbox Series X!'
 pubDate: 'Jun 02 2026'
-heroImage: ''
+heroImage: '/images/game-pass-baja-de-precio-y-la-rompe-m-s-juegos-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass&tag=blogseradero-20'
 ---
 
