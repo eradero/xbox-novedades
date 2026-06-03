@@ -2,7 +2,7 @@
 title: '¡Prendete fuego, gamer! ¡Game Pass te tira 3 juegazos nuevos HOY que no te podés perder!'
 description: '¡Atención, Xboxers! Hoy es un día increíble para tu suscripción a Xbox Game Pass. Tres títulos flamantes se suman a la biblioteca, trayendo aventuras épicas, misterios atrapantes y pura adrenalina. ¿Estás listo para descargar y viciar?'
 pubDate: 'Jun 03 2026'
-heroImage: ''
+heroImage: '/images/prendete-fuego-gamer-game-pass-te-tira-3-juegazos-nuevos-hoy-que-no-te-pod-s-perder.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Game+Pass+Xbox+Series+X+Console&tag=blogseradero-20'
 ---
 
