@@ -2,7 +2,7 @@
 title: '¡Explosión de juegos en Game Pass! Mirá todo lo nuevo que llega para tu Xbox Series X'
 description: 'Preparate, fan de Xbox Series X, porque Game Pass te trae una oleada de juegazos. Desde aventuras espaciales y combates roguelite hasta el boxeo más realista, acá te contamos todo lo que tenés que saber para no perderte nada. ¡A desempolvar ese control!'
 pubDate: 'Jun 04 2026'
-heroImage: ''
+heroImage: '/images/explosi-n-de-juegos-en-game-pass-mir-todo-lo-nuevo-que-llega-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass+Starseeker+Astroneer+Expeditions+Beastro+Undisputed&tag=blogseradero-20'
 ---
 
