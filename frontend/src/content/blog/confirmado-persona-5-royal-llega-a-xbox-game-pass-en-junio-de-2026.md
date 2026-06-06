@@ -2,7 +2,7 @@
 title: '¡Confirmado: Persona 5 Royal llega a Xbox Game Pass en junio de 2026!'
 description: 'El aclamado JRPG Persona 5 Royal se suma al catálogo de Xbox Game Pass en junio de 2026, ¡una noticia explosiva para todos los fans de Xbox! Preparate para una aventura inolvidable.'
 pubDate: 'Jun 05 2026'
-heroImage: ''
+heroImage: '/images/confirmado-persona-5-royal-llega-a-xbox-game-pass-en-junio-de-2026.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Persona+5+Royal+Xbox+Series+X&tag=blogseradero-20'
 ---
 
