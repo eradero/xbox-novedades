@@ -2,7 +2,7 @@
 title: '¡Atención, gamers! ¡Junio llega cargadísimo a Xbox Game Pass y tenés que saberlo todo!'
 description: 'Preparate para descubrir la nueva ola de juegazos que se suman a Xbox Game Pass en junio, ¡directo a tu Xbox Series X! Una explosión de diversión te espera con títulos para todos los gustos.'
 pubDate: 'Jun 06 2026'
-heroImage: ''
+heroImage: '/images/atenci-n-gamers-junio-llega-cargad-simo-a-xbox-game-pass-y-ten-s-que-saberlo-todo.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Game+Pass+Ultimate+Xbox+Series+X&tag=blogseradero-20'
 ---
 
