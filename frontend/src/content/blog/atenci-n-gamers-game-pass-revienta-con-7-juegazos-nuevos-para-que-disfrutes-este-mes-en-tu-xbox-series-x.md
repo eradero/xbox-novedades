@@ -2,7 +2,7 @@
 title: '¡Atención, Gamers! Game Pass Revienta con 7 Juegazos Nuevos para que disfrutes este mes en tu Xbox Series X'
 description: 'Preparate para un bombardeo de diversión: Game Pass suma siete títulos imperdibles que van a explotar tu Xbox Series X. ¡Mirá la lista completa y empezá a descargar ya mismo!'
 pubDate: 'Jun 07 2026'
-heroImage: ''
+heroImage: '/images/atenci-n-gamers-game-pass-revienta-con-7-juegazos-nuevos-para-que-disfrutes-este-mes-en-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+Game+Pass+Ultimate&tag=blogseradero-20'
 ---
 
