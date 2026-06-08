@@ -2,7 +2,7 @@
 title: '¡El Xbox Games Showcase 2026 nos Voló la Cabeza! Preparate para un Año Épico en tu Xbox Series X'
 description: 'El Xbox Games Showcase 2026 fue una locura total, revelando una catarata de juegos increíbles para Xbox Series X, PC y, por supuesto, Xbox Game Pass. Agarrate fuerte, porque lo que se viene es imperdible para cada gamer argentino.'
 pubDate: 'Jun 08 2026'
-heroImage: ''
+heroImage: '/images/el-xbox-games-showcase-2026-nos-vol-la-cabeza-preparate-para-un-a-o-pico-en-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X&tag=blogseradero-20'
 ---
 
