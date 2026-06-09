@@ -2,7 +2,7 @@
 title: '¡El Xbox Games Showcase 2026 Nos Voló la Cabeza: Vuelven los Exclusivos, Estrenos Mundiales y Hardware de Aniversario que Vas a QUERER!'
 description: '¡El Xbox Games Showcase 2026 arrancó con todo y no decepcionó! Te traemos el resumen más completo y copado con la vuelta triunfal de los exclusivos que tanto amamos, estrenos mundiales que nos dejaron con la boca abierta y hardware de aniversario que vas a querer sí o sí. ¡Preparate para la próxima generación de juegazos en tu Xbox Series X!'
 pubDate: 'Jun 09 2026'
-heroImage: ''
+heroImage: '/images/el-xbox-games-showcase-2026-nos-vol-la-cabeza-vuelven-los-exclusivos-estrenos-mundiales-y-hardware-de-aniversario-que-vas-a-querer.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Fable+Albion+Reborn+Gears+of+War+Nexus+Limited+Edition+Xbox+25th+Anniversary&tag=blogseradero-20'
 ---
 
