@@ -2,7 +2,7 @@
 title: '¡Game Pass se adapta y sigue rugiendo: analicemos los cambios y el futuro de Xbox!'
 description: 'Nos metemos de lleno en las novedades de Xbox Game Pass para 2025: la suba de precios y sus repercusiones en la comunidad de suscriptores. ¿Qué significa esto para vos y tu consola? ¡Te lo contamos con la onda de siempre!'
 pubDate: 'Jun 09 2026'
-heroImage: ''
+heroImage: '/images/game-pass-se-adapta-y-sigue-rugiendo-analicemos-los-cambios-y-el-futuro-de-xbox.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+juegos&tag=blogseradero-20'
 ---
 
