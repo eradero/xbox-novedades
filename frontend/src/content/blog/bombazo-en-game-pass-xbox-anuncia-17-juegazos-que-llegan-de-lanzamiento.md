@@ -2,7 +2,7 @@
 title: '¡Bombazo en Game Pass! Xbox anuncia 17 juegazos que llegan de lanzamiento'
 description: 'Xbox vuelve a sorprendernos al confirmar la adición de 17 nuevos títulos que se sumarán a Game Pass desde el día de su lanzamiento, potenciando aún más el catálogo del servicio estrella.'
 pubDate: 'Jun 10 2026'
-heroImage: ''
+heroImage: '/images/bombazo-en-game-pass-xbox-anuncia-17-juegazos-que-llegan-de-lanzamiento.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+Game+Pass+games&tag=blogseradero-20'
 ---
 
