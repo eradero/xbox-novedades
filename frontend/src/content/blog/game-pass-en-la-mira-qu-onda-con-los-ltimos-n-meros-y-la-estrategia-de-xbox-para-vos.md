@@ -2,7 +2,7 @@
 title: '¡Game Pass en la Mira! ¿Qué Onda con los Últimos Números y la Estrategia de Xbox para Vos?'
 description: 'Acá en el blog, analizamos los recientes reportes de Microsoft sobre Xbox Game Pass y cómo estos movimientos, tras un ajuste de precios, impactan la visión a largo plazo de Xbox para nosotros, los gamers argentinos.'
 pubDate: 'Jun 12 2026'
-heroImage: ''
+heroImage: '/images/game-pass-en-la-mira-qu-onda-con-los-ltimos-n-meros-y-la-estrategia-de-xbox-para-vos.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+Game+Pass&tag=blogseradero-20'
 ---
 
