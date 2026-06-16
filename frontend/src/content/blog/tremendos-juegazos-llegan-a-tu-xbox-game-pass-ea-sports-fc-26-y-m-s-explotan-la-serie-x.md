@@ -2,7 +2,7 @@
 title: '¡TREMENDOS JUEGAZOS LLEGAN A TU XBOX GAME PASS! ¡EA SPORTS FC 26 Y MÁS EXPLOTAN LA SERIE X!'
 description: 'Preparate para una avalancha de juegazos que se suman a la biblioteca de Xbox Game Pass este mes, ¡incluyendo el esperado EA Sports FC 26 y un par de gemas imperdibles! Tu Xbox Series X te lo va a agradecer.'
 pubDate: 'Jun 16 2026'
-heroImage: ''
+heroImage: '/images/tremendos-juegazos-llegan-a-tu-xbox-game-pass-ea-sports-fc-26-y-m-s-explotan-la-serie-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=EA+Sports+FC+26+Xbox+Series+X&tag=blogseradero-20'
 ---
 
