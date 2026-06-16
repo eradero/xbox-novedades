@@ -2,7 +2,7 @@
 title: '¡Juegazos Gratis en tu Xbox! Hell Let Loose, State of Decay 2 y Blasphemous 2 te esperan este Finde'
 description: 'Preparate para un fin de semana lleno de acción, supervivencia y desafíos metroidvania porque Xbox te regala horas de diversión con tres juegazos increíbles en los Free Play Days. ¡No te los pierdas!'
 pubDate: 'Jun 15 2026'
-heroImage: ''
+heroImage: '/images/juegazos-gratis-en-tu-xbox-hell-let-loose-state-of-decay-2-y-blasphemous-2-te-esperan-este-finde.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Hell+Let+Loose+Xbox+Series+X&tag=blogseradero-20'
 ---
 
