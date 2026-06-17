@@ -2,7 +2,7 @@
 title: '¡Festejá, gamer! El Game Pass explota con siete juegazos nuevos, ¡incluyendo una sorpresa de Call of Duty!'
 description: 'Preparate para darle rienda suelta a tu Xbox Series X, porque el Game Pass se agranda con una ola de siete títulos impresionantes entre el 16 de junio y el 6 de julio. Desde aventuras aclamadas hasta un bombazo de Call of Duty, tenés de todo para viciar.'
 pubDate: 'Jun 17 2026'
-heroImage: ''
+heroImage: '/images/festej-gamer-el-game-pass-explota-con-siete-juegazos-nuevos-incluyendo-una-sorpresa-de-call-of-duty.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+Call+of+Duty&tag=blogseradero-20'
 ---
 
