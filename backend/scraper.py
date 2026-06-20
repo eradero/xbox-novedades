@@ -15,8 +15,17 @@ def fetch_latest_news():
     feed = feedparser.parse(RSS_URL)
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
 
+    # Ordenar por fecha descendente antes de filtrar (el RSS no garantiza orden)
+    def pub_dt(e):
+        try:
+            return datetime(*e.published_parsed[:6], tzinfo=timezone.utc)
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
+
+    sorted_entries = sorted(feed.entries, key=pub_dt, reverse=True)
+
     articles = []
-    for entry in feed.entries[:5]:
+    for entry in sorted_entries[:20]:
         try:
             pub = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
             if pub < cutoff:
