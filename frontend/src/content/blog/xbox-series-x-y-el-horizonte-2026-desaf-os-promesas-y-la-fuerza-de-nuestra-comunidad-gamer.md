@@ -2,7 +2,7 @@
 title: 'Xbox Series X y el horizonte 2026: ¡Desafíos, promesas y la fuerza de nuestra comunidad gamer!'
 description: 'Nos metemos de lleno en los rumores y análisis sobre el futuro de los juegos de Xbox Series X para 2026, viendo cómo la calidad y la estrategia de Microsoft modelan lo que jugaremos. ¡Sumate a la charla!'
 pubDate: 'Jun 21 2026'
-heroImage: ''
+heroImage: '/images/xbox-series-x-y-el-horizonte-2026-desaf-os-promesas-y-la-fuerza-de-nuestra-comunidad-gamer.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=xbox+series+x+console+and+games&tag=blogseradero-20'
 ---
 
