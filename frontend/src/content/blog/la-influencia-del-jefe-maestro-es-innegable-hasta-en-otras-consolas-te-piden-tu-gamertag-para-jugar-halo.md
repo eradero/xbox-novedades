@@ -2,7 +2,7 @@
 title: '¡La influencia del Jefe Maestro es innegable: hasta en otras consolas te piden tu Gamertag para jugar Halo!'
 description: '¡Fans de Xbox, prepárense! La noticia que nos llega es un claro testimonio del poder y la huella de Halo. Descubrí por qué tu Gamertag es más importante que nunca, incluso si alguien intenta jugar desde "la competencia".'
 pubDate: 'Jun 22 2026'
-heroImage: ''
+heroImage: '/images/la-influencia-del-jefe-maestro-es-innegable-hasta-en-otras-consolas-te-piden-tu-gamertag-para-jugar-halo.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Halo+game+Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
