@@ -2,7 +2,7 @@
 title: '¡Explota Julio en tu Xbox! ¡Halo llega en Día Uno a Game Pass y tenés que vivirlo!'
 description: '¡Preparate para un julio espectacular en tu Xbox! Te contamos todo sobre la llegada explosiva de un nuevo Halo en Día Uno a Game Pass y qué juegos se despiden para que no te los pierdas.'
 pubDate: 'Jun 23 2026'
-heroImage: ''
+heroImage: '/images/explota-julio-en-tu-xbox-halo-llega-en-d-a-uno-a-game-pass-y-ten-s-que-vivirlo.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Halo+Xbox+Series+X&tag=blogseradero-20'
 ---
 
