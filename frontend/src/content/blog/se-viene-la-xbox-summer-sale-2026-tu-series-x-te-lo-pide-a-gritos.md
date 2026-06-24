@@ -2,7 +2,7 @@
 title: '¡Se Viene la Xbox Summer Sale 2026: Tu Series X te lo Pide a Gritos!'
 description: 'Preparate, gamer! La Xbox Summer Sale 2026 está a la vuelta de la esquina, y acá te contamos todo para que exprimas al máximo los descuentos y le saques jugo a tu Xbox Series X con juegazos increíbles. ¡Tu biblioteca va a explotar!'
 pubDate: 'Jun 24 2026'
-heroImage: ''
+heroImage: '/images/se-viene-la-xbox-summer-sale-2026-tu-series-x-te-lo-pide-a-gritos.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+juegos&tag=blogseradero-20'
 ---
 
