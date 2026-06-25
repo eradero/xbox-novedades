@@ -2,7 +2,7 @@
 title: '¡Fin de semana gamer! Free Play Days llegan a tu Xbox Series X con juegazos que no podés perderte'
 description: 'Este fin de semana, la Xbox Series X te trae tres juegazos para disfrutar sin costo. ¡Preparate para la acción, los golpes y la velocidad en tu consola next-gen!'
 pubDate: 'Jun 25 2026'
-heroImage: ''
+heroImage: '/images/fin-de-semana-gamer-free-play-days-llegan-a-tu-xbox-series-x-con-juegazos-que-no-pod-s-perderte.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+games&tag=blogseradero-20'
 ---
 
