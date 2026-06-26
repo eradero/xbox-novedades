@@ -2,7 +2,7 @@
 title: '¡Atención Gamers de Xbox! Novedades Importantes sobre los Precios de tu Consola Preferida'
 description: 'Microsoft ajusta los precios de Xbox Series X y S a nivel global en algunas regiones. Te contamos todo lo que tenés que saber sobre estos cambios y cómo impactan en tu experiencia gamer, siempre con la mirada puesta en el futuro y la pasión por los videojuegos.'
 pubDate: 'Jun 26 2026'
-heroImage: ''
+heroImage: '/images/atenci-n-gamers-de-xbox-novedades-importantes-sobre-los-precios-de-tu-consola-preferida.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
