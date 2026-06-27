@@ -2,7 +2,7 @@
 title: '¡Atención, gamers! Aclaramos el misterio: Tu Xbox Series X está más viva que nunca'
 description: 'Últimamente circuló un rumor que nos puso los pelos de punta, pero acá te traemos la posta: la Xbox Series X sigue a full y con un futuro brillante. ¡No te pierdas los detalles!'
 pubDate: 'Jun 27 2026'
-heroImage: ''
+heroImage: '/images/atenci-n-gamers-aclaramos-el-misterio-tu-xbox-series-x-est-m-s-viva-que-nunca.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
