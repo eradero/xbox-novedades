@@ -2,7 +2,7 @@
 title: '¡JULIO EXPLOTA EN GAME PASS! Halo Campaign Evolved lidera un mes épico para tu Xbox Series X'
 description: 'Preparate para un julio inolvidable en Xbox Game Pass, con el esperado lanzamiento de Halo Campaign Evolved y una selección de juegazos que van a exprimir tu Series X al máximo. ¡No te lo podés perder!'
 pubDate: 'Jun 28 2026'
-heroImage: ''
+heroImage: '/images/julio-explota-en-game-pass-halo-campaign-evolved-lidera-un-mes-pico-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Halo+Campaign+Evolved+Xbox+Series+X+console&tag=blogseradero-20'
 ---
 
