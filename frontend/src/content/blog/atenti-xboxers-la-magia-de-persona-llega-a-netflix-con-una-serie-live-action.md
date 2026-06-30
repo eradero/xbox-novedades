@@ -2,7 +2,7 @@
 title: '¡Atenti, Xboxers! La Magia de Persona Llega a Netflix con una Serie Live-Action'
 description: 'La icónica saga Persona se prepara para una adaptación live-action en Netflix. Una noticia bomba para todos los fans de Xbox que ya disfrutan de estas joyitas en sus consolas y ahora podrán verlas en pantalla.'
 pubDate: 'Jun 30 2026'
-heroImage: ''
+heroImage: '/images/atenti-xboxers-la-magia-de-persona-llega-a-netflix-con-una-serie-live-action.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=persona+series+xbox+series+x+game+console&tag=blogseradero-20'
 ---
 
