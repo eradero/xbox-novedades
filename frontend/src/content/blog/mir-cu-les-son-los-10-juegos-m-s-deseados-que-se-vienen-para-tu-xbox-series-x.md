@@ -2,7 +2,7 @@
 title: '¡Mirá cuáles son los 10 juegos más deseados que se vienen para tu Xbox Series X!'
 description: 'Preparate, fan de Xbox: ¡Microsoft reveló la lista de los juegos más esperados por la comunidad! Descubrí los títulos que van a explotar tu Series X y ya están en la mira de todos.'
 pubDate: 'Jun 29 2026'
-heroImage: ''
+heroImage: '/images/mir-cu-les-son-los-10-juegos-m-s-deseados-que-se-vienen-para-tu-xbox-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+games&ref=nb_ss_ac_0&tag=blogseradero-20'
 ---
 
