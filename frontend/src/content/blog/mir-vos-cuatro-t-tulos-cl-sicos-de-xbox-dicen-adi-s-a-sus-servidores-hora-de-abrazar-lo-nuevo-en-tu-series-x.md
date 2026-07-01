@@ -2,7 +2,7 @@
 title: '¡Mirá Vos! Cuatro Títulos Clásicos de Xbox Dicen Adiós a Sus Servidores: ¡Hora de Abrazar lo Nuevo en Tu Series X!'
 description: 'Un ciclo se cierra para cuatro joyitas de Xbox que apagan sus servidores en julio y agosto de 2026. Pero no te hagás drama, ¡esto es solo el comienzo de nuevas aventuras en tu Xbox Series X!'
 pubDate: 'Jul 01 2026'
-heroImage: ''
+heroImage: '/images/mir-vos-cuatro-t-tulos-cl-sicos-de-xbox-dicen-adi-s-a-sus-servidores-hora-de-abrazar-lo-nuevo-en-tu-series-x.jpg'
 affiliateLink: 'https://www.amazon.com/s?k=Xbox+Series+X+console+games&tag=blogseradero-20'
 ---
 
